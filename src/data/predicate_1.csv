@@ -1,0 +1,82 @@
+Title,ID,Data type,Description,Examples,Inverse,In ,
+instance of,P31,Item,"instance of: that class of which this subject is a particular example and member; different from P279 (subclass of); for example: K2 is an instance of mountain; volcano is a subclass of mountain (and an instance of volcanic landform)
+Wikibase value:film (Q11424)
+short film (Q24862)
+television film (Q506240)
+anthology film (Q336144)",12 Angry Men <instance of> film,-,12,http://www.wikidata.org/prop/direct/P31
+title,P1476,Monolingual text,"original title and title: published name of a work, such as a newspaper article, a literary work, piece of music, a website, or a performance work
+language = original language
+Wikidata qualifier: ISO 9:1995 (P2183), transliteration (P2440)",12 Angry Men <title> 12 Angry Men (English),-,#N/A,
+publication date,P577,Point in time,"publication date: date or point in time when a work was first published or released
+Wikidata qualifier: place of publication (P291) (country, film festival, geographic region). List each place in a separate statement",12 Angry Men <publication date> 1957,-,#N/A,
+original language of film or TV show,P364,Item,"original language: language in which a film or a performance work was originally created. Deprecated for written works and songs; use P407 (""language of work or name"") instead.
+• silent film → N/A (Q21686005)",12 Angry Men <original language of film or TV show> English,-,69,http://www.wikidata.org/prop/direct/P364
+genre,P136,Item,genre and by genre: creative work's genre or an artist's field of work (P101). Use main subject (P921) to relate creative works to their topic,E.T. the Extra-Terrestrial <genre> science fiction film,-,36,http://www.wikidata.org/prop/direct/P136
+director,P57,Item,"director, theatrical director, film director, film or television director, television director and radio director: director(s) of film, TV-series, stageplay, video game or similar",12 Angry Men <director> Sidney Lumet,-,20,http://www.wikidata.org/prop/direct/P57
+cast member,P161,Item,"actor, film actor, television actor, singer, ballet dancer, stage actor, animal actor, performing artist, seiyū, cast member, pornographic actor, radio actor, model, musical theatre actor, actress, reality television participant, cast member of, opera singer, drag queen and kabuki actor: actor in the subject production [use ""character role"" (P453) and/or ""name of the character role"" (P4633) as qualifiers] [use ""voice actor"" (P725) for voice-only role]
+Wikidata qualifier: character role (P453), subject named as (P1810)",12 Angry Men <cast member> Martin Balsam,-,46,http://www.wikidata.org/prop/direct/P161
+director of photography,P344,Item,"cinematographer: person responsible for the framing, lighting, and filtration of the subject work",12 Angry Men <director of photography> Boris Kaufman,-,67,http://www.wikidata.org/prop/direct/P344
+screenwriter,P58,Item,screenwriter and film screenwriter: person(s) who wrote the script for subject item,12 Angry Men <screenwriter> Reginald Rose,-,21,http://www.wikidata.org/prop/direct/P58
+film editor,P1040,Item,"film editor: person who works with the raw footage, selecting shots and combining them into sequences to create a finished motion picture",12 Angry Men <film editor> Carl Lerner,-,124,http://www.wikidata.org/prop/direct/P1040
+producer,P162,Item,"producer: person(s) who produced the film, musical work, theatrical production, etc. (for film, this does not include executive producers, associate producers, etc.) [for production company, use P272, video games - use P178]",12 Angry Men <producer> Henry Fonda,-,#N/A,
+narrative location,P840,Item,narrative location: the narrative of the work is set in this location,12 Angry Men <narrative location> New York City,-,112,http://www.wikidata.org/prop/direct/P840
+filming location,P915,Item,"filming location and filmed here: actual place where this scene/film was shot. For the setting, use ""narrative location"" (P840)",Lucy <filming location> Cité du Cinéma,-,113,http://www.wikidata.org/prop/direct/P915
+country of origin,P495,Item,"country of origin: country of origin of this item (creative work, food, phrase, product, etc.)",12 Angry Men <country of origin> United States of America,-,86,http://www.wikidata.org/prop/direct/P495
+image,P18,Commons media file,"illustration and image: image of relevant illustration of the subject; if available, also use more specific properties (sample: coat of arms image, locator map, flag image, signature image, logo image, collage image)","20,000 Leagues Under the Sea <image> 20,000 Leagues under the Sea - movie scene - newspaper July 1917.jpg",-,#N/A,
+film poster,P3383,Commons media file,"film poster: poster used to promote and advertise this film (if file is available on Commons). Use P154 for logos, P18 for movie stills and related images. Items about film posters can be linked with the qualifier ""subject of"" (P805).","20,000 Leagues Under the Sea <film poster> Poster - 20,000 Leagues under the Sea (1916).jpg",-,#N/A,
+video,P10,Commons media file,"video recording: relevant video. For images, use the property P18. For film trailers, qualify with ""object has role"" (P3831)=""trailer"" (Q622550)",The Birds <video> The Birds trailer (1963).webm,-,#N/A,
+executive producer,P1431,Item,executive producer: executive producer of a movie or TV show,Lucy <executive producer> Marc Shmuger,-,147,http://www.wikidata.org/prop/direct/P1431
+production company,P272,Item,"production company: company that produced this film, audio or performing arts work",The Scarlet Runner <production company> Vitagraph Studios,-,60,http://www.wikidata.org/prop/direct/P272
+composer,P86,Item,"composer: person(s) who wrote the music [for lyricist, use ""lyrics by"" (P676)]",The Internet's Own Boy: The Story of Aaron Swartz <composer> John Dragonetti,-,#N/A,
+voice actor,P725,Item,"voice actor: performer of a spoken role in a creative work such as animation, video game, radio drama, or dubbing over [use ""character role"" (P453) as qualifier] [use ""cast member"" (P161) for live acting]",Star Wars: Episode IV – A New Hope <voice actor> James Earl Jones,-,98,http://www.wikidata.org/prop/direct/P725
+based on,P144,Item,based on: the work(s) used as the basis for subject item,12 Angry Men <based on> Twelve Angry Men,derivative work,40,http://www.wikidata.org/prop/direct/P144
+after a work by,P1877,Item,creative work: artist whose work strongly inspired/ was copied in this item,Here There Be Tygers <after a work by> Ray Bradbury,-,162,http://www.wikidata.org/prop/direct/P1877
+main subject,P921,Item,"topic, matter, topic of a work and subject: primary topic of a work (see also P180: depicts)",12 Angry Men <main subject> jury,-,114,http://www.wikidata.org/prop/direct/P921
+set in period,P2408,Item,"historical period: historical, contemporary, or future period, year, century or day the work or genre is set in or event featured in the story of the work",Mary Poppins <set in period> Edwardian era,-,173,http://www.wikidata.org/prop/direct/P2408
+list of characters,P1881,Item,Wikimedia list of fictional characters: Wikimedia page with the list of characters for this work,12 Angry Men <list of characters> jury,-,#N/A,
+soundtrack release,P406,Item,"soundtrack album, soundtrack single and soundtrack extended play: music release that incorporates music directly recorded from the soundtrack of an audiovisual work",Skyfall <soundtrack release> Skyfall – Original Motion Picture Soundtrack,-,#N/A,
+color,P462,Item,"color: color of subject
+Wikibase value=black and white (Q838368), color (Q22006653)",Metropolis <color> black and white,-,81,http://www.wikidata.org/prop/direct/P462
+aspect ratio (W:H),P2061,Item,"aspect ratio: image width to height ratio of films, photographs, and other images",E.T. the Extra-Terrestrial <aspect ratio (W:H)> 1.85:1,-,166,http://www.wikidata.org/prop/direct/P2061
+average shot length,P2208,Quantity,average shot length: cinemetrical measure,The Bourne Supremacy <average shot length> 2.4 seconds,-,#N/A,
+significant event,P793,Item,"key event: significant or notable events associated with the subject
+Wikibase value=principal photography (Q1256415), Wikidata qualifier: start time (P580), end time (P582);
+Wikibase value=lost film (Q1268687)",Spectre <significant event> principal photography,-,106,http://www.wikidata.org/prop/direct/P793
+part of the series,P179,Item,"series, series of creative works, event sequence, book series and painting series: series which contains the subject
+Wikidata qualifier: follows (P155), followed by (P156), series ordinal (P1545)","The Lion, the Witch, and the Wardrobe <part of the series> The Chronicles of Narnia",-,52,http://www.wikidata.org/prop/direct/P179
+different from,P1889,Item,"difference and different from: item that is different from another item, with which it may be confused
+For multiple-language version film (Q2518205): Wikidata qualifier: criterion used (P1013)= multiple-language version film (Q2518205)",A Woman Who Knows What She Wants <different from> A Woman Who Knows What She Wants,-,163,http://www.wikidata.org/prop/direct/P1889
+has quality,P1552,Item,"quality: the entity has an inherent or distinguishing non-material characteristic
+Wikidata qualifier: title (P1476)",Naked Gun 33⅓: The Final Insult <has quality> title for Quebec,-,155,http://www.wikidata.org/prop/direct/P1552
+working title,P1638,Monolingual text,working title: temporary name of a product or project used during its development,Bridge of Spies <working title> St. James Place,-,#N/A,
+cost,P2130,Quantity,cost: amount of money spent on building or producing an object,Creasyville Covered Bridge <cost> 301.25 United States dollar,-,#N/A,
+box office,P2142,Quantity,box office: box office takings accumulated by a film,"Skyfall <box office> 1,108,561,013 United States dollar",-,#N/A,
+narrator,P2438,Item,"storyteller and narrator: narrator, character or person that tells the story",Titanic <narrator> Gloria Stuart,-,175,http://www.wikidata.org/prop/direct/P2438
+costume designer,P2515,Item,"costume designer: person who designed the costumes for a film, television programme, etc",The Revenant <costume designer> Jacqueline West,-,176,http://www.wikidata.org/prop/direct/P2515
+production designer,P2554,Item,"production designer: person(s) responsible for overall aesthetic of the story of this motion picture, play, video game or similar; responsible for visual concept, producing interior, exterior, location, graphics, etc; deals with many and varied logistic related to this",Gone with the Wind <production designer> William Cameron Menzies,-,179,http://www.wikidata.org/prop/direct/P2554
+duration,P2047,Quantity,duration: length of time of an event or process,La Grande Vadrouille <duration> 132 minute,-,#N/A,
+distributed by,P750,Item,distributor: distributor of a creative work; distributor for a record label; news agency; film distributor,Rush Hour <distributed by> New Line Cinema,-,104,http://www.wikidata.org/prop/direct/P750
+copyright status,P6216,Item,"copyright status: copyright status for intellectual creations like works of art, publications, software, etc.",Parasite <copyright status> copyrighted,-,228,http://www.wikidata.org/prop/direct/P6216
+sound designer,P5028,Item,"sound designer: person responsible for the sound on a stage, in a film or in a radio drama",Son of Saul <sound designer> Tamás Zányi,-,218,http://www.wikidata.org/prop/direct/P5028
+presented in,P5072,Item,"event at which a talk, film, paper, or poster was presented",The Shape of Water <presented in> 2017 Toronto International Film Festival,-,219,http://www.wikidata.org/prop/direct/P5072
+award received,P166,Item,"award, honorary citizenship and title of honor: award or recognition received by a person, organization or creative work",12 Angry Men <award received> Golden Bear,-,47,http://www.wikidata.org/prop/direct/P166
+review score,P444,String,value judgment: review score received by a creative work or other entity,E.T. the Extra-Terrestrial <review score> 4/4,-,#N/A,
+nominated for,P1411,Item,"award nomination received by a person, organisation or creative work (inspired from ""award received"" (Property:P166))",12 Angry Men <nominated for> Academy Award for Best Picture,nominee,143,http://www.wikidata.org/prop/direct/P1411
+intended public,P2360,Item,"target audience: this work, product, object or event is intended for, or has been designed to that person or group of people, animals, plants, etc",Naive Set Theory <intended public> teenager,-,171,http://www.wikidata.org/prop/direct/P2360
+MPA film rating,P1657,Item,MPA classification category: US film classification administered by the Motion Picture Association of America,Star Wars: Episode IV – A New Hope <MPA film rating> PG,-,158,http://www.wikidata.org/prop/direct/P1657
+FSK film rating,P1981,Item,"FSK rating category: permitted audience of a film, according to the German film-rating system (add Prüfnummer with qualifier ""P2676"")",Reservoir Dogs <FSK film rating> FSK 18,-,164,http://www.wikidata.org/prop/direct/P1981
+NMHH film rating,P2363,Item,NMHH classification: rating of a film in the Hungarian film rating system,The Man from U.N.C.L.E. <NMHH film rating> Category III,-,172,http://www.wikidata.org/prop/direct/P2363
+CNC film rating (France),P2758,Item,CNC film classification category: category assigned to a film by the Board of Film Classification (CNC) which what audiences may view it in France,Fight Club <CNC film rating (France)> no minors under sixteen,-,188,http://www.wikidata.org/prop/direct/P2758
+Filmiroda rating,P2747,Item,Filmiroda rating system: rating of a film in the former (2004–2011) Hungarian film rating system,Tinker Tailor Soldier Spy <Filmiroda rating> Category III,-,186,http://www.wikidata.org/prop/direct/P2747
+EIRIN film rating,P2756,Item,EIRIN film rating category: category in the Japanese film rating system (add EIRIN number with qualifier P2676),Ushimitsu no mura <EIRIN film rating> R18+,-,187,http://www.wikidata.org/prop/direct/P2756
+RTC film rating,P3834,Item,RTC film classification system: rating of a film in the Mexican film classification system,Logan <RTC film rating> C,-,208,http://www.wikidata.org/prop/direct/P3834
+INCAA film rating,P3428,Item,INCAA rating system: rating of a movie in the Argentinian content rating system,Nine Queens <INCAA film rating> +13,-,203,http://www.wikidata.org/prop/direct/P3428
+JMK film rating,P3650,Item,JMK film classification system: rating of a film in the Austrian film rating system,Amour <JMK film rating> free from 12 years,-,205,http://www.wikidata.org/prop/direct/P3650
+KMRB film rating,P3818,Item,KMRB film rating system: rating of a film in the South Korean film/video rating system,The Handmaiden <KMRB film rating> Adults only,-,207,http://www.wikidata.org/prop/direct/P3818
+RTC film rating,P3834,Item,RTC film classification system: rating of a film in the Mexican film classification system,Logan <RTC film rating> C,-,208,http://www.wikidata.org/prop/direct/P3834
+FPB rating,P4437,Item,FPB rating system and FPB rating category: rating of a film or video game in the South African media content rating system,The Wound <FPB rating> 16,-,211,http://www.wikidata.org/prop/direct/P4437
+IGAC rating,P5150,Item,IGAC classification system: rating of a film or theatrical production in the Portuguese classification system,What Now? Remind Me <IGAC rating> M/12,-,221,http://www.wikidata.org/prop/direct/P5150
+KAVI rating,P5152,Item,Kuvaohjelmien ikärajat Suomessa: rating in the Finnish film and television rating system,The Fencer <KAVI rating> 7,-,222,http://www.wikidata.org/prop/direct/P5152
+IMDA rating,P5201,Item,IMDA classification system: rating in the Singaporean film and video game rating system,Pop Aye <IMDA rating> M18,-,223,http://www.wikidata.org/prop/direct/P5201
+CHVRS Classification,P6657,Item,Canadian Home Video Rating System: Canadian movie classification,Gerontophilia <CHVRS Classification> 14A,-,#N/A,
+RCQ classification,P6658,Item,RCQ film rating system: movie classification for the Régie du Cinéma Québécois,The Good Lie <RCQ classification> 13+,-,231,http://www.wikidata.org/prop/direct/P6658

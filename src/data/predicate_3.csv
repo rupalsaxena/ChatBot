@@ -1,0 +1,248 @@
+LInk,Property,Property_pastedval,Name of Relation,In movie
+http://www.wikidata.org/prop/direct/P6,,head of government(P6),P6,FALSE
+http://www.wikidata.org/prop/direct/P17,,country(P17),P17,FALSE
+http://www.wikidata.org/prop/direct/P19,,place of birth(P19),P19,FALSE
+http://www.wikidata.org/prop/direct/P20,,place of death(P20),P20,FALSE
+http://www.wikidata.org/prop/direct/P21,,sex or gender(P21),P21,FALSE
+http://www.wikidata.org/prop/direct/P22,,father(P22),P22,FALSE
+http://www.wikidata.org/prop/direct/P25,,mother(P25),P25,FALSE
+http://www.wikidata.org/prop/direct/P26,,spouse(P26),P26,FALSE
+http://www.wikidata.org/prop/direct/P27,,country of citizenship(P27),P27,FALSE
+http://www.wikidata.org/prop/direct/P30,,continent(P30),P30,FALSE
+http://www.wikidata.org/prop/direct/P31,,instance of(P31),P31,TRUE
+http://www.wikidata.org/prop/direct/P35,,head of state(P35),P35,FALSE
+http://www.wikidata.org/prop/direct/P36,,capital(P36),P36,FALSE
+http://www.wikidata.org/prop/direct/P37,,official language(P37),P37,FALSE
+http://www.wikidata.org/prop/direct/P40,,child(P40),P40,FALSE
+http://www.wikidata.org/prop/direct/P47,,shares border with(P47),P47,FALSE
+http://www.wikidata.org/prop/direct/P50,,author(P50),P50,FALSE
+http://www.wikidata.org/prop/direct/P54,,member of sports team(P54),P54,FALSE
+http://www.wikidata.org/prop/direct/P57,,director(P57),P57,TRUE
+http://www.wikidata.org/prop/direct/P58,,screenwriter(P58),P58,TRUE
+http://www.wikidata.org/prop/direct/P66,,ancestral home(P66),P66,FALSE
+http://www.wikidata.org/prop/direct/P69,,educated at(P69),P69,FALSE
+http://www.wikidata.org/prop/direct/P91,,sexual orientation(P91),P91,FALSE
+http://www.wikidata.org/prop/direct/P97,,noble title(P97),P97,FALSE
+http://www.wikidata.org/prop/direct/P101,,field of work(P101),P101,FALSE
+http://www.wikidata.org/prop/direct/P103,,native language(P103),P103,FALSE
+http://www.wikidata.org/prop/direct/P106,,occupation(P106),P106,FALSE
+http://www.wikidata.org/prop/direct/P108,,employer(P108),P108,FALSE
+http://www.wikidata.org/prop/direct/P112,,founded by(P112),P112,FALSE
+http://www.wikidata.org/prop/direct/P119,,place of burial(P119),P119,FALSE
+http://www.wikidata.org/prop/direct/P123,,publisher(P123),P123,FALSE
+http://www.wikidata.org/prop/direct/P127,,owned by(P127),P127,FALSE
+http://www.wikidata.org/prop/direct/P131,,located in the administrative territorial entity(P131),P131,FALSE
+http://www.wikidata.org/prop/direct/P135,,movement(P135),P135,FALSE
+http://www.wikidata.org/prop/direct/P136,,genre(P136),P136,TRUE
+http://www.wikidata.org/prop/direct/P137,,operator(P137),P137,FALSE
+http://www.wikidata.org/prop/direct/P138,,named after(P138),P138,FALSE
+http://www.wikidata.org/prop/direct/P140,,religion or worldview(P140),P140,FALSE
+http://www.wikidata.org/prop/direct/P144,,based on(P144),P144,TRUE
+http://www.wikidata.org/prop/direct/P150,,contains the administrative territorial entity(P150),P150,FALSE
+http://www.wikidata.org/prop/direct/P155,,follows(P155),P155,FALSE
+http://www.wikidata.org/prop/direct/P156,,named after,P156,FALSE
+http://www.wikidata.org/prop/direct/P157,,killed by(P157),P157,FALSE
+http://www.wikidata.org/prop/direct/P159,,headquarters location(P159),P159,FALSE
+http://www.wikidata.org/prop/direct/P161,,cast member(P161),P161,TRUE
+http://www.wikidata.org/prop/direct/P166,,award received(P166),P166,TRUE
+http://www.wikidata.org/prop/direct/P170,,creator(P170),P170,FALSE
+http://www.wikidata.org/prop/direct/P172,,ethnic group(P172),P172,FALSE
+http://www.wikidata.org/prop/direct/P175,performer(P175),performer(P175),P175,FALSE
+http://www.wikidata.org/prop/direct/P178,,developer(P178),P178,FALSE
+http://www.wikidata.org/prop/direct/P179,,part of the series(P179),P179,TRUE
+http://www.wikidata.org/prop/direct/P180,,depicts(P180),P180,FALSE
+http://www.wikidata.org/prop/direct/P190,,twinned administrative body(P190),P190,FALSE
+http://www.wikidata.org/prop/direct/P195,,collection(P195),P195,FALSE
+http://www.wikidata.org/prop/direct/P205,,basin country(P205),P205,FALSE
+http://www.wikidata.org/prop/direct/P206,,located in or next to body of water(P206),P206,FALSE
+http://www.wikidata.org/prop/direct/P241,,military branch,P241,FALSE
+http://www.wikidata.org/prop/direct/P263,,official residence(P263),P263,FALSE
+http://www.wikidata.org/prop/direct/P272,,production company(P272),P272,TRUE
+http://www.wikidata.org/prop/direct/P275,,copyright license(P275),P275,FALSE
+http://www.wikidata.org/prop/direct/P276,,location(P276),P276,FALSE
+http://www.wikidata.org/prop/direct/P279,,subclass of(P279),P279,FALSE
+http://www.wikidata.org/prop/direct/P287,,designed by(P287),P287,FALSE
+http://www.wikidata.org/prop/direct/P291,,place of publication(P291),P291,FALSE
+http://www.wikidata.org/prop/direct/P306,,operating system(P306),P306,FALSE
+http://www.wikidata.org/prop/direct/P344,,director of photography(P344),P344,TRUE
+http://www.wikidata.org/prop/direct/P361,,part of(P361),P361,FALSE
+http://www.wikidata.org/prop/direct/P364,,original language of film or TV show(P364),P364,TRUE
+http://www.wikidata.org/prop/direct/P366,,has use(P366),P366,FALSE
+http://www.wikidata.org/prop/direct/P371,,presenter(P371),P371,FALSE
+http://www.wikidata.org/prop/direct/P400,,platform(P400),P400,FALSE
+http://www.wikidata.org/prop/direct/P407,,language of work or name(P407),P407,FALSE
+http://www.wikidata.org/prop/direct/P425,,field of this occupation(P425),P425,FALSE
+http://www.wikidata.org/prop/direct/P437,,distribution format(P437),P437,FALSE
+http://www.wikidata.org/prop/direct/P449,,original broadcaster(P449),P449,FALSE
+http://www.wikidata.org/prop/direct/P451,,unmarried partner(P451),P451,FALSE
+http://www.wikidata.org/prop/direct/P452,,industry(P452),P452,FALSE
+http://www.wikidata.org/prop/direct/P460,#N/A,said to be the same as(P460),P460,FALSE
+http://www.wikidata.org/prop/direct/P461,,opposite of(P461),P461,FALSE
+http://www.wikidata.org/prop/direct/P462,,color(P462),P462,TRUE
+http://www.wikidata.org/prop/direct/P463,,member of(P463),P463,FALSE
+http://www.wikidata.org/prop/direct/P466,,occupant(P466),P466,FALSE
+http://www.wikidata.org/prop/direct/P479,,input method(P479),P479,FALSE
+http://www.wikidata.org/prop/direct/P485,,archives at(P485),P485,FALSE
+http://www.wikidata.org/prop/direct/P495,,country of origin(P495),P495,TRUE
+http://www.wikidata.org/prop/direct/P509,,cause of death(P509),P509,FALSE
+http://www.wikidata.org/prop/direct/P527,,has part(s)(P527),P527,FALSE
+http://www.wikidata.org/prop/direct/P530,,diplomatic relation(P530),P530,FALSE
+http://www.wikidata.org/prop/direct/P551,,residence(P551),P551,FALSE
+http://www.wikidata.org/prop/direct/P607,,conflict(P607),P607,FALSE
+http://www.wikidata.org/prop/direct/P629,,edition or translation of(P629),P629,FALSE
+http://www.wikidata.org/prop/direct/P641,sport(P641),sport(P641),P641,FALSE
+http://www.wikidata.org/prop/direct/P669,,located on street(P669),P669,FALSE
+http://www.wikidata.org/prop/direct/P674,,characters(P674),P674,FALSE
+http://www.wikidata.org/prop/direct/P706,,located in/on physical feature(P706),P706,FALSE
+http://www.wikidata.org/prop/direct/P710,,participant(P710),P710,FALSE
+http://www.wikidata.org/prop/direct/P725,,voice actor,P725,TRUE
+http://www.wikidata.org/prop/direct/P735,,given name(P735),P735,FALSE
+http://www.wikidata.org/prop/direct/P737,,influenced by(P737),P737,FALSE
+http://www.wikidata.org/prop/direct/P740,,location of formation(P740),P740,FALSE
+http://www.wikidata.org/prop/direct/P747,,has edition or translation(P747),P747,FALSE
+http://www.wikidata.org/prop/direct/P749,,parent organization(P749),P749,FALSE
+http://www.wikidata.org/prop/direct/P750,,distributed by(P750),P750,TRUE
+http://www.wikidata.org/prop/direct/P767,,contributor to the creative work or subject(P767),P767,FALSE
+http://www.wikidata.org/prop/direct/P793,,significant event(P793),P793,TRUE
+http://www.wikidata.org/prop/direct/P800,,notable work(P800),P800,FALSE
+http://www.wikidata.org/prop/direct/P802,,student(P802),P802,FALSE
+http://www.wikidata.org/prop/direct/P825,,dedicated to(P825),P825,FALSE
+http://www.wikidata.org/prop/direct/P828,,has cause(P828),P828,FALSE
+http://www.wikidata.org/prop/direct/P832,,public holiday(P832),P832,FALSE
+http://www.wikidata.org/prop/direct/P840,,narrative location(P840),P840,TRUE
+http://www.wikidata.org/prop/direct/P915,,filming location(P915),P915,TRUE
+http://www.wikidata.org/prop/direct/P921,,main subject(P921),P921,TRUE
+http://www.wikidata.org/prop/direct/P931,,place served by transport hub(P931),P931,FALSE
+http://www.wikidata.org/prop/direct/P937,,work location(P937),P937,FALSE
+http://www.wikidata.org/prop/direct/P941,,inspired by(P941),P941,FALSE
+http://www.wikidata.org/prop/direct/P945,,allegiance(P945),P945,FALSE
+http://www.wikidata.org/prop/direct/P1001,,applies to jurisdiction(P1001),P1001,FALSE
+http://www.wikidata.org/prop/direct/P1027,,conferred by(P1027),P1027,FALSE
+http://www.wikidata.org/prop/direct/P1029,crew member(s)(P1029),crew member(s)(P1029),P1029,FALSE
+http://www.wikidata.org/prop/direct/P1037,,director / manager(P1037),P1037,FALSE
+http://www.wikidata.org/prop/direct/P1038,relative(P1038),relative(P1038),P1038,FALSE
+http://www.wikidata.org/prop/direct/P1040,,film editor(P1040),P1040,TRUE
+http://www.wikidata.org/prop/direct/P1050,medical condition(P1050),medical condition(P1050),P1050,FALSE
+http://www.wikidata.org/prop/direct/P1056,,product or material produced(P1056),P1056,FALSE
+http://www.wikidata.org/prop/direct/P1066,,student of(P1066),P1066,FALSE
+http://www.wikidata.org/prop/direct/P1080,,from narrative universe(P1080),P1080,FALSE
+http://www.wikidata.org/prop/direct/P1142,,political ideology(P1142),P1142,FALSE
+http://www.wikidata.org/prop/direct/P1165,,home world(P1165),P1165,FALSE
+http://www.wikidata.org/prop/direct/P1196,,manner of death(P1196),P1196,FALSE
+http://www.wikidata.org/prop/direct/P1269,,facet of(P1269),P1269,FALSE
+http://www.wikidata.org/prop/direct/P1299,,depicted by(P1299),P1299,FALSE
+http://www.wikidata.org/prop/direct/P1327,,partner in business or sport(P1327),P1327,FALSE
+http://www.wikidata.org/prop/direct/P1343,,described by source(P1343),P1343,FALSE
+http://www.wikidata.org/prop/direct/P1344,,participant in(P1344),P1344,FALSE
+http://www.wikidata.org/prop/direct/P1346,,winner(P1346),P1346,FALSE
+http://www.wikidata.org/prop/direct/P1365,,replaces(P1365),P1365,FALSE
+http://www.wikidata.org/prop/direct/P1366,,replaced by(P1366),P1366,FALSE
+http://www.wikidata.org/prop/direct/P1376,,capital of(P1376),P1376,FALSE
+http://www.wikidata.org/prop/direct/P1382,,partially coincident with(P1382),P1382,FALSE
+http://www.wikidata.org/prop/direct/P1399,#N/A,convicted of(P1399),P1399,FALSE
+http://www.wikidata.org/prop/direct/P1411,,nominated for(P1411),P1411,TRUE
+http://www.wikidata.org/prop/direct/P1412,#N/A,"languages spoken, written or signed(P1412)",P1412,FALSE
+http://www.wikidata.org/prop/direct/P1416,,affiliation(P1416),P1416,FALSE
+http://www.wikidata.org/prop/direct/P1429,,has pet(P1429),P1429,FALSE
+http://www.wikidata.org/prop/direct/P1431,,executive producer(P1431),P1431,TRUE
+http://www.wikidata.org/prop/direct/P1433,published in(P1433),published in(P1433),P1433,FALSE
+http://www.wikidata.org/prop/direct/P1434,,takes place in fictional universe(P1434),P1434,FALSE
+http://www.wikidata.org/prop/direct/P1441,,present in work(P1441),P1441,FALSE
+http://www.wikidata.org/prop/direct/P1445,,fictional universe described in(P1445),P1445,FALSE
+http://www.wikidata.org/prop/direct/P1455,,list of works(P1455),P1455,FALSE
+http://www.wikidata.org/prop/direct/P1532,,country for sport(P1532),P1532,FALSE
+http://www.wikidata.org/prop/direct/P1542,,has effect(P1542),P1542,FALSE
+http://www.wikidata.org/prop/direct/P1552,,has quality(P1552),P1552,TRUE
+http://www.wikidata.org/prop/direct/P1576,,lifestyle(P1576),P1576,FALSE
+http://www.wikidata.org/prop/direct/P1589,,lowest point(P1589),P1589,FALSE
+http://www.wikidata.org/prop/direct/P1657,,MPA film rating(P1657),P1657,TRUE
+http://www.wikidata.org/prop/direct/P1809,,choreographer(P1809),P1809,FALSE
+http://www.wikidata.org/prop/direct/P1830,,owner of(P1830),P1830,FALSE
+http://www.wikidata.org/prop/direct/P1875,,represented by(P1875),P1875,FALSE
+http://www.wikidata.org/prop/direct/P1877,,after a work by(P1877),P1877,TRUE
+http://www.wikidata.org/prop/direct/P1889,,different from(P1889),P1889,TRUE
+http://www.wikidata.org/prop/direct/P1981,,FSK film rating(P1981),P1981,TRUE
+http://www.wikidata.org/prop/direct/P1995,,health specialty(P1995),P1995,FALSE
+http://www.wikidata.org/prop/direct/P2061,,aspect ratio (W:H)(P2061),P2061,TRUE
+http://www.wikidata.org/prop/direct/P2079,,fabrication method(P2079),P2079,FALSE
+http://www.wikidata.org/prop/direct/P2283,,uses(P2283),P2283,FALSE
+http://www.wikidata.org/prop/direct/P2341,,indigenous to(P2341),P2341,FALSE
+http://www.wikidata.org/prop/direct/P2348,,time period(P2348),P2348,FALSE
+http://www.wikidata.org/prop/direct/P2360,,intended public(P2360),P2360,TRUE
+http://www.wikidata.org/prop/direct/P2363,,NMHH film rating(P2363),P2363,TRUE
+http://www.wikidata.org/prop/direct/P2408,,set in period(P2408),P2408,TRUE
+http://www.wikidata.org/prop/direct/P2416,,sports discipline competed in(P2416),P2416,FALSE
+http://www.wikidata.org/prop/direct/P2438,,narrator(P2438),P2438,TRUE
+http://www.wikidata.org/prop/direct/P2515,,costume designer(P2515),P2515,TRUE
+http://www.wikidata.org/prop/direct/P2541,,operating area(P2541),P2541,FALSE
+http://www.wikidata.org/prop/direct/P2546,,sidekick of(P2546),P2546,FALSE
+http://www.wikidata.org/prop/direct/P2554,,production designer(P2554),P2554,TRUE
+http://www.wikidata.org/prop/direct/P2563,,superhuman feature or ability(P2563),P2563,FALSE
+http://www.wikidata.org/prop/direct/P2629,,BBFC rating(P2629),P2629,FALSE
+http://www.wikidata.org/prop/direct/P2632,,place of detention(P2632),P2632,FALSE
+http://www.wikidata.org/prop/direct/P2637,,RARS rating(P2637),P2637,FALSE
+http://www.wikidata.org/prop/direct/P2650,,interested in(P2650),P2650,FALSE
+http://www.wikidata.org/prop/direct/P2684,,Kijkwijzer rating(P2684),P2684,FALSE
+http://www.wikidata.org/prop/direct/P2747,Filmiroda rating(P2747),Filmiroda rating(P2747),P2747,TRUE
+http://www.wikidata.org/prop/direct/P2756,,EIRIN film rating(P2756),P2756,TRUE
+http://www.wikidata.org/prop/direct/P2758,,CNC film rating (France)(P2758),P2758,TRUE
+http://www.wikidata.org/prop/direct/P2860,,cites work(P2860),P2860,FALSE
+http://www.wikidata.org/prop/direct/P2936,,language used(P2936),P2936,FALSE
+http://www.wikidata.org/prop/direct/P3092,,film crew member(P3092),P3092,FALSE
+http://www.wikidata.org/prop/direct/P3095,,practiced by(P3095),P3095,FALSE
+http://www.wikidata.org/prop/direct/P3156,,Australian Classification(P3156),P3156,FALSE
+http://www.wikidata.org/prop/direct/P3174,,art director(P3174),P3174,FALSE
+http://www.wikidata.org/prop/direct/P3216,,ClassInd rating(P3216),P3216,FALSE
+http://www.wikidata.org/prop/direct/P3275,,storyboard artist(P3275),P3275,FALSE
+http://www.wikidata.org/prop/direct/P3300,,musical conductor(P3300),P3300,FALSE
+http://www.wikidata.org/prop/direct/P3301,,broadcast by(P3301),P3301,FALSE
+http://www.wikidata.org/prop/direct/P3306,,ICAA rating(P3306),P3306,FALSE
+http://www.wikidata.org/prop/direct/P3342,,significant person(P3342),P3342,FALSE
+http://www.wikidata.org/prop/direct/P3373,,sibling(P3373),P3373,FALSE
+http://www.wikidata.org/prop/direct/P3402,,CNC film rating (Romania)(P3402),P3402,FALSE
+http://www.wikidata.org/prop/direct/P3428,,INCAA film rating(P3428),P3428,TRUE
+http://www.wikidata.org/prop/direct/P3448,,stepparent(P3448),P3448,FALSE
+http://www.wikidata.org/prop/direct/P3650,,JMK film rating(P3650),P3650,TRUE
+http://www.wikidata.org/prop/direct/P3803,,original film format(P3803),P3803,FALSE
+http://www.wikidata.org/prop/direct/P3818,,KMRB film rating(P3818),P3818,TRUE
+http://www.wikidata.org/prop/direct/P3834,,RTC film rating(P3834),P3834,TRUE
+http://www.wikidata.org/prop/direct/P3842,,located in the present-day administrative territorial entity(P3842),P3842,FALSE
+http://www.wikidata.org/prop/direct/P3931,,copyright holder(P3931),P3931,FALSE
+http://www.wikidata.org/prop/direct/P4437,,FPB rating(P4437),P4437,TRUE
+http://www.wikidata.org/prop/direct/P4584,,first appearance(P4584),P4584,FALSE
+http://www.wikidata.org/prop/direct/P4608,,scenographer(P4608),P4608,FALSE
+http://www.wikidata.org/prop/direct/P4805,,make-up artist(P4805),P4805,FALSE
+http://www.wikidata.org/prop/direct/P4908,,season(P4908),P4908,FALSE
+http://www.wikidata.org/prop/direct/P4969,,derivative work(P4969),P4969,FALSE
+http://www.wikidata.org/prop/direct/P5021,,assessment(P5021),P5021,FALSE
+http://www.wikidata.org/prop/direct/P5028,,sound designer(P5028),P5028,TRUE
+http://www.wikidata.org/prop/direct/P5072,,presented in(P5072),P5072,TRUE
+http://www.wikidata.org/prop/direct/P5096,,member of the crew of(P5096),P5096,FALSE
+http://www.wikidata.org/prop/direct/P5150,,IGAC rating(P5150),P5150,TRUE
+http://www.wikidata.org/prop/direct/P5152,,KAVI rating(P5152),P5152,TRUE
+http://www.wikidata.org/prop/direct/P5201,,IMDA rating(P5201),P5201,TRUE
+http://www.wikidata.org/prop/direct/P5389,,permanent resident of(P5389),P5389,FALSE
+http://www.wikidata.org/prop/direct/P5940,,plot expanded in(P5940),P5940,FALSE
+http://www.wikidata.org/prop/direct/P5970,,Medierådet rating(P5970),P5970,FALSE
+http://www.wikidata.org/prop/direct/P6166,,quotes work(P6166),P6166,FALSE
+http://www.wikidata.org/prop/direct/P6216,,copyright status(P6216),P6216,TRUE
+http://www.wikidata.org/prop/direct/P6275,,copyright representative(P6275),P6275,FALSE
+http://www.wikidata.org/prop/direct/P6379,,has works in the collection(P6379),P6379,FALSE
+http://www.wikidata.org/prop/direct/P6658,,RCQ classification(P6658),P6658,TRUE
+http://www.wikidata.org/prop/direct/P6886,,writing language(P6886),P6886,FALSE
+http://www.wikidata.org/prop/direct/P6942,,animator(P6942),P6942,FALSE
+http://www.wikidata.org/prop/direct/P6962,,narrative motif(P6962),P6962,FALSE
+http://www.wikidata.org/prop/direct/P7047,,enemy of(P7047),P7047,FALSE
+http://www.wikidata.org/prop/direct/P7327,OFLC classification(P7327),OFLC classification(P7327),P7327,FALSE
+http://www.wikidata.org/prop/direct/P7573,,IFCO rating(P7573),P7573,FALSE
+http://www.wikidata.org/prop/direct/P7936,,business model(P7936),P7936,FALSE
+http://www.wikidata.org/prop/direct/P7937,,form of creative work(P7937),P7937,FALSE
+http://www.wikidata.org/prop/direct/P7959,historic county(P7959),historic county(P7959),P7959,FALSE
+http://www.wikidata.org/prop/direct/P8345,,media franchise(P8345),P8345,FALSE
+http://www.wikidata.org/prop/direct/P8371,"references work, tradition or theory(P8371)","references work, tradition or theory(P8371)",P8371,FALSE
+http://www.wikidata.org/prop/direct/P8411,set in environment(P8411),set in environment(P8411),P8411,FALSE
+http://www.wikidata.org/prop/direct/P8670,character designer(P8670),character designer(P8670),P8670,FALSE
+http://www.wikidata.org/prop/direct/P8874,,Hong Kong film rating(P8874),P8874,FALSE
+http://www.wikidata.org/prop/direct/P8889,,MTRCB rating(P8889),P8889,FALSE
+http://www.wikidata.org/prop/direct/P9086,,BAMID film rating(P9086),P9086,FALSE
+http://www.wikidata.org/prop/direct/P9215,,set during recurring event(P9215),P9215,FALSE

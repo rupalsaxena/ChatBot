@@ -1,0 +1,255 @@
+wiki_code,label,description
+P344,director of photography,"person responsible for the framing, lighting, and filtration of the subject work"
+P3156,Australian Classification,content rating of an audiovisual work or video game in the Australian Classification system
+P425,field of this occupation,"field corresponding to this occupation or profession (use only for occupations/professions - for people use Property:P101, for companies use P452)"
+P195,collection,"art, museum, archival, or bibliographic collection the subject is part of"
+P138,named after,"entity or event that inspired the subject's name, or namesake (in at least one language). Qualifier ""applies to name"" (P5168) can be used to indicate which one"
+P452,industry,specific industry of company or organization
+P463,member of,"organization, club or musical group to which the subject belongs. Do not use for membership in ethnic or social groups, nor for holding a political position, such as a member of parliament (use P39 for that)."
+P2554,production designer,"person(s) responsible for overall aesthetic of the story of this motion picture, play, video game or similar; responsible for visual concept, producing interior, exterior, location, graphics, etc; deals with many and varied logistic related to this"
+P6962,narrative motif,"thematic unit in a narrative or literary work used to develop a theme, mood or plot"
+P190,twinned administrative body,"twin towns, sister cities, twinned municipalities and other localities that have a partnership or cooperative agreement, either legally or informally acknowledged by their governments"
+P30,continent,continent of which the subject is a part
+P1441,present in work,"this (fictional or fictionalized) entity or person appears in that work as part of the narration (use P2860 for works citing other works, P361/P1433 for works being part of other works, P1343 for entities described in non-fictional accounts)"
+P276,location,"location of the object, structure or event. In the case of an administrative entity as containing item use P131. For statistical entities use P8138. In the case of a geographic entity use P706. Use P7153 for locations associated with the object."
+P5970,Medierådet rating,rating of a film in the Danish movie content rating system
+P2363,NMHH film rating,rating of a film in the Hungarian film rating system
+P1344,participant in,event in which a person or organization was/is a participant; inverse of P710 or P1923
+P2756,EIRIN film rating,category in the Japanese film rating system (add EIRIN number with qualifier P2676)
+P1327,partner in business or sport,professional collaborator
+P1455,list of works,link to the article with the works of a person; use P358 for discographies
+P2541,operating area,"geographic area or jurisdiction an organisation or industry operates in, serves, or has responsibility for"
+P166,award received,"award or recognition received by a person, organization or creative work"
+P3428,INCAA film rating,rating of a movie in the Argentinian content rating system
+P669,located on street,"street, road, or square, where the item is located. To add the number, use Property:P670 ""house number"" as qualifier. Use property P6375 ""street address"", if there is no item for the street"
+P3931,copyright holder,person or organisation who holds the copyright of a work according to the Berne Convention
+P7936,business model,business model a business enterprise or creative work operates under
+P6379,has works in the collection,collection that has works of this person or organisation (use archive location P485 for the archives)
+P629,edition or translation of,is an edition or translation of this entity
+P2629,BBFC rating,"British media content rating (add BBFC reference with qualifier ""P2676"")"
+P1066,student of,person who has taught this person
+P7937,form of creative work,structure of a creative work
+P737,influenced by,"this person, idea, etc. is informed by that other person, idea, etc., e.g. “Heidegger was influenced by Aristotle”"
+P3834,RTC film rating,rating of a film in the Mexican film classification system
+P69,educated at,educational institution attended by subject
+P5389,permanent resident of,country or region where a person has the legal status of permanent resident
+P706,located in/on physical feature,located on the specified (geo)physical feature. Should not be used when the value is only political/administrative (P131) or a mountain range (P4552).
+P140,religion or worldview,"religion of a person, organization or religious building, or associated with this subject"
+P945,allegiance,country (or other power) that the person or group serves
+P1196,manner of death,"general circumstances of a person's death; e.g. natural causes, accident, suicide, homicide, etc.  Use 'cause of death' (P509) for the specific physiological mechanism, e.g. heart attack, trauma, pneumonia..."
+P674,characters,"characters which appear in this item (like plays, operas, operettas, books, comics, films, TV series, video games)"
+P1411,nominated for,"award nomination received by a person, organisation or creative work (inspired from ""award received"" (Property:P166))"
+P1056,product or material produced,"material or product produced by a government agency, business, industry, facility, or process"
+P161,cast member,"actor in the subject production [use ""character role"" (P453) and/or ""name of the character role"" (P4633) as qualifiers] [use ""voice actor"" (P725) for voice-only role]"
+P6658,RCQ classification,movie classification for the Régie du Cinéma Québécois
+P131,located in the administrative territorial entity,the item is located on the territory of the following administrative entity. Use P276 for specifying locations that are non-administrative places and for items about events. Use P1382 if the item falls only partially into the administrative entity.
+P8411,set in environment,"environment (geographic feature, building type, etc.) the narrative work is set in"
+P1809,choreographer,person(s) who did the choreography
+P1412,"languages spoken, written or signed","language(s) that a person or a people speaks, writes or signs, including the native language(s)"
+P400,platform,"platform for which a work was developed or released, or the specific platform version of a software product"
+P2408,set in period,"historical, contemporary, or future period, year, century or day the work or genre is set in or event featured in the story of the work"
+P460,said to be the same as,"this item is said to be the same as that item, but it's uncertain or disputed"
+P1830,owner of,entities owned by the subject
+P2438,narrator,"narrator, character or person that tells the story"
+P1431,executive producer,executive producer of a movie or TV show
+P57,director,"director(s) of film, TV-series, stageplay, video game or similar"
+P2747,Filmiroda rating,rating of a film in the former (2004–2011) Hungarian film rating system
+P1589,lowest point,"point with lowest elevation in the country, region, city or area"
+P1376,capital of,"country, state, department, canton or other administrative division of which the municipality is the governmental seat"
+P37,official language,language designated as official by this item
+P170,creator,maker of this creative work or other object (where no more specific property exists)
+P36,capital,"seat of government of a country, province, state or other type of administrative territorial entity"
+P35,head of state,official with the highest formal authority in a country/state
+P2283,uses,item or concept used by the subject or in the operation (see also instrument [P1303] and armament [P520])
+P371,presenter,main role in presenting a radio or television program or a performing arts show
+P1542,has effect,effect of this item
+P3650,JMK film rating,rating of a film in the Austrian film rating system
+P66,ancestral home,place of origin for ancestors of subject
+P577,publication date,date or point in time when a work was first published or released
+P449,original broadcaster,network(s) or service(s) that originally broadcast a radio or television program
+P180,depicts,"entity visually depicted in an image, literarily described in a work, or otherwise incorporated into an audiovisual or other medium; see also P921,  'main subject'"
+P25,mother,"female parent of the subject. For stepmother, use ""stepparent"" (P3448)"
+P1269,facet of,"topic of which this item is an aspect, item that offers a broader perspective on the same topic"
+P2936,language used,language widely used (spoken or written) in this place or at this event
+P825,dedicated to,person or organization to whom the subject was dedicated
+P119,place of burial,"location of grave, resting place, place of ash-scattering, etc. (e.g., town/city or cemetery) for a person or animal. There may be several places: e.g., re-burials, parts of body buried separately."
+P2546,sidekick of,close companion of a fictional character
+P27,country of citizenship,the object is a country that recognizes the subject as its citizen
+P241,military branch,"branch to which this military unit, award, office, or person belongs, e.g. Royal Navy"
+P5940,plot expanded in,a narrative of this creative work is expanded in another work while '''not necessarily''' being part of the same series. For series use P179 instead
+P3448,stepparent,subject has the object as their stepparent
+P2348,time period,"time period (historic period or era, sports season, theatre season, legislative period etc.) in which the subject occurred"
+P767,contributor to the creative work or subject,person or organization that contributed to a subject: co-creator of a creative work or subject
+P3342,significant person,person linked to the item in any possible way
+P1365,replaces,"person, state or item replaced. Use ""structure replaces"" (P1398) for structures. Use ""follows"" (P155) if the previous item was not replaced or predecessor and successor are identical"
+P551,residence,"the place where the person is or has been, resident"
+P8874,Hong Kong film rating,Hong Kong film classification system
+P364,original language of film or TV show,"language in which a film or a performance work was originally created. Deprecated for written works and songs; use P407 (""language of work or name"") instead."
+P6216,copyright status,"copyright status for intellectual creations like works of art, publications, software, etc."
+P840,narrative location,the narrative of the work is set in this location
+P6942,animator,person creating animated sequences out of still images
+P3803,original film format,"film format used to create a work (aliases: film gauge, film size)"
+P747,has edition or translation,link to an edition of this item
+P178,developer,organization or person that developed the item
+P3373,sibling,"the subject and the object have at least one common parent (brother, sister, etc. including half-siblings); use ""relative"" (P1038) for siblings-in-law (brother-in-law, sister-in-law, etc.) and step-siblings (step-brothers, step-sisters, etc.)"
+tag,,
+P5201,IMDA rating,rating in the Singaporean film and video game rating system
+P1433,published in,"larger work that a given work was published in, like a book, journal or music album"
+P40,child,subject has object as child. Do not use for stepchildren
+P1875,represented by,person or agency that represents or manages the subject
+P144,based on,the work(s) used as the basis for subject item
+P710,participant,"person, group of people or organization (object) that actively takes/took part in an event or process (subject).  Preferably qualify with ""object has role"" (P3831). Use P1923 for participants that are teams."
+P5150,IGAC rating,rating of a film or theatrical production in the Portuguese classification system
+P1037,director / manager,person who manages any kind of group
+P1399,convicted of,crime a person was convicted of
+P2637,RARS rating,rating in the Russian media content rating system
+P263,official residence,the residence at which heads of government and other senior figures officially reside
+P3216,ClassInd rating,"rating of an audiovisual work, video game or RPG in the Brazilian Advisory Rating System (ClassInd)"
+P2563,superhuman feature or ability,"superhuman, supernatural, or paranormal abilities that the fictional subject exhibits"
+P2360,intended public,"this work, product, object or event is intended for, or has been designed to that person or group of people, animals, plants, etc"
+P6166,quotes work,"other creative work which this work quotes from textually, verbally or lyrically"
+P1080,from narrative universe,subject's fictional entity is in the object narrative. See also P1441 (present in work) and P1445 (fictional universe described in)
+P937,work location,"location where persons or organisations were actively participating in employment, business or other work"
+P127,owned by,owner of the subject
+P407,language of work or name,"language associated with this creative work (such as books, shows, songs, broadcasts or websites) or a name (for persons use ""native language"" (P103) and ""languages spoken, written or signed"" (P1412))"
+P740,location of formation,location where a group or organization was formed
+P1040,film editor,"person who works with the raw footage, selecting shots and combining them into sequences to create a finished motion picture"
+P306,operating system,operating system (OS) on which a software works or the OS installed on hardware
+P5072,presented in,"event at which a talk, film, paper, or poster was presented"
+P8670,character designer,"person in charge of developing the style and concept of a character in a video game, anime or other creative work"
+P275,copyright license,license under which this copyrighted work is released
+P2758,CNC film rating (France),category assigned to a film by the Board of Film Classification (CNC) which what audiences may view it in France
+P108,employer,person or organization for which the subject works or worked
+P4584,first appearance,work in which a fictional/mythical character or entity first appeared
+P1889,different from,"item that is different from another item, with which it may be confused"
+P451,unmarried partner,"someone with whom the person is in a relationship without being married. Use ""spouse"" (P26) for married couples"
+P793,significant event,significant or notable events associated with the subject
+P607,conflict,"battles, wars or other military engagements in which the person or item participated"
+P1050,medical condition,"any state relevant to the health of an organism, including diseases and positive conditions"
+P2650,interested in,item of special or vested interest to this person or organisation
+P17,country,sovereign state of this item (not to be used for human beings)
+P137,operator,"person, profession, or organization that operates the equipment, facility, or service"
+P5096,member of the crew of,"person who has been a member of a crew associated with the vessel or spacecraft. For spacecraft, inverse of crew member (P1029), backup or reserve team or crew (P3015)"
+P179,part of the series,series which contains the subject
+P2142,box office,box office takings accumulated by a film
+P9086,BAMID film rating,rating in the Taiwanese movie content rating system
+P123,publisher,"organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software"
+P5021,assessment,"subject took the test or exam, or was assessed per test or method"
+P725,voice actor,"performer of a spoken role in a creative work such as animation, video game, radio drama, or dubbing over [use ""character role"" (P453) as qualifier] [use ""cast member"" (P161) for live acting]"
+P4908,season,season of a television show or podcast series
+P1142,political ideology,political ideology of an organization or person or of a work (such as a newspaper)
+P8889,MTRCB rating,rating of a film or television program in the Philippines
+P3306,ICAA rating,rating in the Spanish motion picture content rating system
+P7959,historic county,"traditional, geographical division of Great Britain and Ireland"
+P2684,Kijkwijzer rating,Dutch media content rating system
+P58,screenwriter,person(s) who wrote the script for subject item
+P735,given name,first name or another given name of this person; values used with the property should not link disambiguations nor family names
+P155,follows,"immediately prior item in a series of which the subject is a part, preferably use as qualifier of P179 [if the subject has replaced the preceding item, e.g. political offices, use ""replaces"" (P1365)]"
+P6,head of government,"head of the executive power of this town, city, municipality, state, country, or other governmental body"
+description,,
+P205,basin country,country that have drainage to/from or border the body of water
+P366,has use,main use of the subject (includes current and former usage)
+P461,opposite of,item that is the opposite of this item
+P1981,FSK film rating,"permitted audience of a film, according to the German film-rating system (add Prüfnummer with qualifier ""P2676"")"
+P1029,crew member(s),person(s) that participated operating or serving aboard this vehicle
+P530,diplomatic relation,diplomatic relations of the country
+P136,genre,creative work's genre or an artist's field of work (P101). Use main subject (P921) to relate creative works to their topic
+P1657,MPA film rating,US film classification administered by the Motion Picture Association of America
+P479,input method,input method or device used to interact with a software product
+P462,color,color of subject
+P1434,takes place in fictional universe,"the subject is a work describing a fictional universe, i.e. whose plot occurs in this universe."
+P4437,FPB rating,rating of a film or video game in the South African media content rating system
+P47,shares border with,"countries or administrative subdivisions, of equal level, that this item borders, either by land or water. A single common point is enough."
+P2079,fabrication method,"method, process or technique used to grow, cook, weave, build, assemble, manufacture the item"
+P1552,has quality,the entity has an inherent or distinguishing non-material characteristic
+P112,founded by,"founder or co-founder of this organization, religion or place"
+rdf-schema#label,,
+P1382,partially coincident with,"object that partially overlaps with the subject in its instances, parts, or members"
+P1001,applies to jurisdiction,"the item (institution, law, public office, public register...) or statement belongs to or has power over or applies to the value (a territorial jurisdiction: a country, state, municipality, ...)"
+P291,place of publication,geographical place of publication of the edition (use 1st edition when referring to works)
+P6275,copyright representative,person or organisation who represents the copyright for this person or work of art
+P21,sex or gender,"sex or gender identity of human or animal. For human: male, female, non-binary, intersex, transgender female, transgender male, agender. For animal: male organism, female organism. Groups of same gender use subclass of (P279)"
+P3300,musical conductor,"the person who directs a musical group, orchestra or chorus"
+P4969,derivative work,"new work of art (film, book, software, etc.) derived from major part of this work"
+P106,occupation,"occupation of a person; see also ""field of work"" (Property:P101), ""position held"" (Property:P39)"
+P1429,has pet,pet that a person owns
+P31,instance of,that class of which this subject is a particular example and member; different from P279 (subclass of); for example: K2 is an instance of mountain; volcano is a subclass of mountain (and an instance of volcanic landform)
+P3174,art director,"person credited as the art director/artistic director of this work; manages the process of making the visuals, which is done by concept artists, graphic designers, set designers, costume designers, lighting designers; See also P8938 for organizations"
+P641,sport,sport that the subject participates or participated in or is associated with
+P802,student,notable student(s) of the subject individual
+P1038,relative,"family member (qualify with ""type of kinship"", P1039; for direct family member please use specific property)"
+P3402,CNC film rating (Romania),rating of a movie in the Romanian content rating system
+P3095,practiced by,type of agents that study this subject or work in this profession
+P20,place of death,"most specific known (e.g. city instead of country, or hospital instead of city) death location of a person, animal or fictional character"
+P279,subclass of,"this item is a subclass (subset) of that item; all instances of these items are instances of those items; different from P31 (instance of), e.g.: K2 is an instance of mountain; volcano is a subclass of mountain (and an instance of volcanic landform)."
+P361,part of,"object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). Inverse property of ""has part"" (P527, see also ""has parts of the class"" (P2670))."
+P6886,writing language,language in which the writer has written their work
+P527,has part(s),"part of this subject; inverse property of ""part of"" (P361). See also ""has parts of the class"" (P2670)."
+P3818,KMRB film rating,rating of a film in the South Korean film/video rating system
+P5152,KAVI rating,rating in the Finnish film and television rating system
+P1576,lifestyle,"typical way of life of an individual, group, or culture"
+P97,noble title,titles held by the person
+P1165,home world,home planet or natural satellite for a fictional character or species
+P150,contains the administrative territorial entity,(list of) direct subdivisions of an administrative territorial entity
+P206,located in or next to body of water,body of water on or next to which a place is located
+P509,cause of death,"underlying or immediate cause of death.  Underlying cause (e.g. car accident, stomach cancer) preferred.  Use 'manner of death' (P1196) for broadest category, e.g. natural causes, accident, homicide, suicide"
+P7327,OFLC classification,rating in the media content rating system of New Zealand
+P18,image,"image of relevant illustration of the subject; if available, also use more specific properties (sample: coat of arms image, locator map, flag image, signature image, logo image, collage image)"
+P172,ethnic group,"subject's ethnicity (consensus is that a VERY high standard of proof is needed for this field to be used. In general this means 1) the subject claims it themselves, or 2) it is widely agreed on by scholars, or 3) is fictional and portrayed as such)"
+P5028,sound designer,"person responsible for the sound on a stage, in a film or in a radio drama"
+P437,distribution format,method (or type) of distribution for the subject
+P156,followed by,"immediately following item in a series of which the subject is a part, preferably use as qualifier of P179 [if the subject has been replaced, e.g. political offices, use ""replaced by"" (P1366)]"
+P3842,located in the present-day administrative territorial entity,the item was located in the territory of this present-day administrative unit; however the two did not at any point coexist in time
+P101,field of work,specialization of a person or organization; see P106 for the occupation
+P175,performer,"actor, musician, band or other performer associated with this role or musical work"
+P2341,indigenous to,"place or ethnic group where a language, art genre, cultural tradition or expression, cooking style or food, or biological species or variety is found (or was originally found)"
+P2632,place of detention,place where this person is or was detained
+P54,member of sports team,sports teams or clubs that the subject represents or represented
+P915,filming location,"actual place where this scene/film was shot. For the setting, use ""narrative location"" (P840)"
+P135,movement,"literary, artistic, scientific or philosophical movement or scene associated with this person or work. For political ideologies use P1142."
+P485,archives at,the institution holding the subject's archives
+P50,author,"main creator(s) of a written work (use on works, not humans); use P2093 when Wikidata item is unknown or does not exist"
+P103,native language,language or languages a person has learned from early childhood
+P1027,conferred by,"person or organization who grants an award, certification, grant, or role"
+P159,headquarters location,"city, where an organization's headquarters is or has been situated. Use P276 qualifier for specific building"
+P750,distributed by,distributor of a creative work; distributor for a record label; news agency; film distributor
+P345,IMDb ID,"identifier for the IMDb [with prefix 'tt', 'nm', 'co', 'ev', 'ch' or 'ni']"
+P4608,scenographer,person who designed the stage or film set of this item
+P272,production company,"company that produced this film, audio or performing arts work"
+P91,sexual orientation,"the sexual orientation of the person — use ONLY IF they have stated it themselves, unambiguously, or it has been widely agreed upon by historians after their death"
+P1299,depicted by,"object depicting this subject (creative works, books of the bible)"
+P832,public holiday,"official public holiday that occurs in this place in its honor, usually a non-working day"
+P157,killed by,person who killed the subject
+P2860,cites work,citation from one creative or scholarly work to another
+P19,place of birth,"most specific known (e.g. city instead of country, or hospital instead of city) birth location of a person, animal or fictional character"
+P800,notable work,"notable scientific, artistic or literary work, or other work of significance among subject's works"
+P828,has cause,"underlying cause, thing that ultimately resulted in this effect"
+P1366,replaced by,"other person or item which continues the item by replacing it in its role. Use P156 (""followed by"") if the item is not replaced nor identical, but adds to the series (e.g. books in a series)."
+P7047,enemy of,opponent character or group of this fictive character or group
+P1995,health specialty,"main specialty that diagnoses, prevent human illness, injury and other physical and mental impairments"
+P1343,described by source,work where this item is described
+P1346,winner,"winner of a competition or similar event, not to be used for awards (instead use ""award received"" (P166) on awardee's item, possibly qualified with ""for work"" (P1686)) or for wars or battles"
+P495,country of origin,"country of origin of this item (creative work, food, phrase, product, etc.)"
+P1445,fictional universe described in,"to link a fictional universe with a work that describes it: <universe> ""described in the work:"" <work>"
+P749,parent organization,"parent organization of an organization, opposite of subsidiaries (P355)"
+P2515,costume designer,"person who designed the costumes for a film, television programme, etc"
+P941,inspired by,"work, human, place or event which inspired this creative work or fictional entity"
+P3092,film crew member,"member of the crew creating an audiovisual work, used for miscellaneous roles qualified with the job title when no specific property exists. Don't use if such a property is available: notably for cast member (P161), director (P57), etc."
+P26,spouse,"the subject has the object as their spouse (husband, wife, partner, etc.). Use ""unmarried partner"" (P451) for non-married companions"
+P8371,"references work, tradition or theory","creative work, tradition or theory this creative work references by allusion, quote or similar means (for citations in scholarly and legal works use P2860, for other more specific properties have a look at ""see also"" on the property page)"
+P9215,set during recurring event,"recurring event (e.g. season, month, holiday) during which this fictional work is set"
+P466,occupant,person or organization occupying property
+P1416,affiliation,organization that a person or organization is affiliated with (not necessarily member of or employed by)
+P8345,media franchise,this creative work belongs to this media franchise
+P931,place served by transport hub,"territorial entity or entities served by this transport hub (airport, train station, etc.)"
+P1877,after a work by,artist whose work strongly inspired/ was copied in this item
+P22,father,"male parent of the subject. For stepfather, use ""stepparent"" (P3448)"
+P2416,sports discipline competed in,discipline an athlete competed in within a sport
+P287,designed by,person(s) or organization which designed the object
+P3301,broadcast by,"channel, network, website or service that broadcast this item over radio, TV or the Internet"
+P3275,storyboard artist,person credited as the storyboard artist of this work
+P4805,make-up artist,"person responsible for the make-up of cast members in a theatrical production, TV or film"
+P2061,aspect ratio (W:H),"image width to height ratio of films, photographs, and other images"
+P921,main subject,primary topic of a work (see also P180: depicts)
+P1532,country for sport,country a person or a team represents when playing a sport
+P7573,IFCO rating,rating certificate of a film in the Irish content classification system
