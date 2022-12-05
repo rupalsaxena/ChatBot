@@ -3,18 +3,19 @@ import atexit
 import getpass
 import requests  # install the package via "pip install requests"
 from collections import defaultdict
-from Algorithm import Algorithm
+from Algorithm import getResponse
+from Preprocess import Preprocess
 # url of the speakeasy server
 url = 'https://speakeasy.ifi.uzh.ch'
 listen_freq = 1
 
 
 class DemoBot:
-    def __init__(self, username, password):
+    def __init__(self, username, password, prior_obj):
         self.agent_details = self.login(username, password)
         self.session_token = self.agent_details['sessionToken']
         self.chat_state = defaultdict(lambda: {'messages': defaultdict(dict), 'initiated': False, 'my_alias': None})
-
+        self.prior_obj = prior_obj
         atexit.register(self.logout)
 
     def listen(self):
@@ -45,8 +46,7 @@ class DemoBot:
                                 print('\t- Chatroom {} - new message #{}: \'{}\' - {}'.format(room_id, message['ordinal'], message['message'], self.get_time()))
 
                                 ##### You should call your agent here and get the response message #####
-                                algo = Algorithm(message["message"])
-                                reply = algo.get_reply()
+                                reply = getResponse(message["message"], self.prior_obj)
                                 self.post_message(room_id=room_id, session_token=self.session_token, message=reply)
                                 # self.post_message(room_id=room_id, session_token=self.session_token, message='Got your message: \'{}\' at {}.'.format(message['message'], self.get_time()))
             time.sleep(listen_freq)
@@ -79,5 +79,6 @@ class DemoBot:
 if __name__ == '__main__':
     username = 'rupal.saxena_bot'
     password = "Tori3IWM-Ep-Jw"
-    demobot = DemoBot(username, password)
+    prior_obj = Preprocess()
+    demobot = DemoBot(username, password, prior_obj)
     demobot.listen()

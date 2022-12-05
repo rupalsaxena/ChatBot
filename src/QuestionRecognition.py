@@ -18,7 +18,8 @@ class QuestionRecognition:
                 "Who directed Titanic?",
                 "What is the box office of The Princess and the Frog?",
                 "Can you tell me the publication date of Tom Meets Zizou?",
-                "Who is the executive producer of X-Men: First Class?"
+                "Who is the executive producer of X-Men: First Class?",
+                "Who directed Titanic?"
             ],
             "multimedia":[
                 "Show me a picture of Halle Berry.",
@@ -28,7 +29,9 @@ class QuestionRecognition:
                 "How does Adam Levine look like?",
                 "Show me face of Adam Levine",
                 "Show how Adam Levine look like",
-                "What does Adam Levine look like"
+                "What does Adam Levine look like",
+                "Image of Amitabh Bachchan?",
+                "Images of Julia Roberts?"
             ],
             "recommendation":[
                 "Recommend movies similar to Hamlet and Othello.",

@@ -4,28 +4,65 @@ import Constants
 from nltk.corpus import stopwords
 from Graphs import Graphs
 from QuestionRecognition import QuestionRecognition
+from Embeddings import Embeddings
 
 
 class Preprocess:
     def __init__(self):
         self.datapath="data"
+        self.load_all_entities()
         self.load_predicates()
         self.load_default_data()
         self.question_model = QuestionRecognition()
         self.g = Graphs()
+        self.embed_obj = Embeddings(self.g.get_graph())
     
     def load_default_data(self):
         foldername = "data/all_data_folder"
+
         print("loading humans data")
         self.humans = pd.read_csv(os.path.join(foldername, "all_humans.csv"))
+        self.humans["names"] = self.humans["names"].apply(lambda x: x.lower())
+        self.humans["ids"] = self.humans["ids"].apply(lambda x: x.split("/")[-1])
+
         print("loading movies data")
         self.movies = pd.read_csv(os.path.join(foldername, "all_movies.csv"))
+        self.movies["names"] = self.movies["names"].apply(lambda x: x.lower())
+        self.movies["ids"] = self.movies["ids"].apply(lambda x: x.split("/")[-1])
+
         print("loading character data")
         self.chars = pd.read_csv(os.path.join(foldername, "all_character.csv"))
+        self.chars["names"] = self.chars["names"].apply(lambda x: x.lower())
+        self.chars["ids"] = self.chars["ids"].apply(lambda x: x.split("/")[-1])
+
         print("loading genres data")
         self.genre = pd.read_csv(os.path.join(foldername, "all_genres.csv"))
+        self.genre["names"] = self.genre["names"].apply(lambda x: x.lower())
+        self.genre["ids"] = self.genre["ids"].apply(lambda x: x.split("/")[-1])
+
         print("loading awards data")
         self.awards = pd.read_csv(os.path.join(foldername, "all_awards.csv"))
+        self.awards["names"] = self.awards["names"].apply(lambda x: x.lower())
+        self.awards["ids"] = self.awards["ids"].apply(lambda x: x.split("/")[-1])
+    
+    def load_all_entities(self):
+        foldername = "data/"
+        print("loading all entity data")
+        self.all_entities = pd.read_csv(os.path.join(foldername, "entity_mappings.csv"))
+        self.all_entities = self.all_entities.astype(str)
+        self.all_entities["label"] = self.all_entities["label"].apply(lambda x: x.lower())
+        self.all_entities.rename(columns = {'label':'names'}, inplace = True)
+        self.all_entities.rename(columns = {'wiki_code':'ids'}, inplace = True)
+        self.all_entities.drop(columns='description', inplace=True)
+    
+    def getAllEntities(self):
+        return self.all_entities
+
+    def getHumans(self):
+        return self.humans
+    
+    def getMovies(self):
+        return self.movies
 
     def getDefaultData(self):
         return self.humans, self.movies, self.chars, self.genre, self.awards
@@ -81,6 +118,9 @@ class Preprocess:
     
     def get_graph(self):
         return self.g
+    
+    def get_emb_obj(self):
+        return self.embed_obj
     
     def remove_stopwords(self, input):
         # removing stopwords and useless words from input

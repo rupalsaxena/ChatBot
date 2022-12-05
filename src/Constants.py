@@ -3,6 +3,7 @@ SPECIAL_CHARS = ["?", ",", ".", "!", ";"]
 # TODO add more words here
 USELESS_WORDS = ["who", "which", "what", "how", "do", "does", "have"]
 
+
 # ENTITY_TYPES = {
 #     wd['Q8242']:        'literature',
 #     wd['Q5']:           'human',
