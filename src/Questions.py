@@ -1,63 +1,105 @@
 import random
 from EntityRecognition import EntityRecognition
+from PredicateRecognition import RecognizePredicate
 
-"""
-TODO: change the code to make it work for names rather than ids
-"""
-default_response = "I don't understand it. Can you rephrase it?"
+# TODO: use imdb page for rating person or movie!! MAYBE
+
+DEFAULT_RESPONSES = [
+    "Umm! I don't think I understand that! Can I help you in some other way?",
+    "Hmmmmm! I am not sure what you mean. Can you rephrase it or ask another question?",
+    "Honestly, I don't know this. :P",
+    "I don't have an answer for this. Can I help you with something else?"
+]
 
 class Question:
-    def __init__(self, predicates, msg, prior_obj, graph):
-        self.predicates = predicates
+    def __init__(self, msg, prior_obj, graph):
         self.msg = msg
         self.prior_obj = prior_obj
         self.graph = graph
         self.responses = []
-        predicate, pred_ids = self.predicates
         self.embed = self.prior_obj.get_emb_obj()
-        print("predicates and id:", predicate, pred_ids)
-        if len(predicate) > 0:
-            ents, ent_ids = self.recognize_entities()
-            if ents != -1:
-                self.process(ents, ent_ids, pred_ids)
+        ent_dict = self.recognize_entities()
+        pred_ids = self.recognize_predicate(ent_dict)
+        if len(ent_dict)>0 and len(pred_ids)>0:
+            self.process(ent_dict, pred_ids)
+        elif len(ent_dict)>0:
+            print("do something with just entities without predicates")
+        elif len(pred_ids)>0:
+            print("do something with just predicates without entities")
         self.chooseResponse()
 
-    def process(self, ent, ent_ids, pred_ids):
-        if len(ent_ids) > 0:
-            for ent_id in ent_ids:
-                if ent_id is not None and ent_id != -1:
-                    for pred_id in pred_ids:
-                        response = self.graph.queryFactual(ent_id, pred_id)
-                        self.responses.extend(response)
-        print("responses:", self.responses)
-
-        if len(self.responses) < 1:
-            for ent in ent:
+    def process(self, ent_dict, pred_ids):
+        # factual query 
+        self.fact_resp = []
+        for label in ent_dict:
+            ent_id = ent_dict[label]["id"]
+            if ent_id != -1:
                 for pred_id in pred_ids:
-                    response = self.embed.apply_embedding(ent, pred_id)
-                    self.responses.append(response)
-            print("responses:", self.responses)
+                    response = self.graph.queryFactual(ent_id, pred_id)
+                    self.fact_resp.extend(response)
+        
+        # embedding query
+        self.emb_resp = []
+        self.from_embedding = False
+        if len(self.fact_resp) < 1:
+            for label in ent_dict:
+                for pred_id in pred_ids:
+                    response = self.embed.apply_embedding(ent_dict[label]["id"], pred_id)
+                    if response[0] != -1:
+                        self.emb_resp.append(response)
+            if len(self.emb_resp) > 0:
+                self.from_embedding=True
+                if len(self.emb_resp) == 1:
+                    self.responses = self.emb_resp[0]
+                else:
+                    self.responses = random.choice(self.emb_resp)
+        else:
+            self.responses = self.fact_resp
+
+        print("factual:", self.fact_resp)
+        print("emb resp", self.emb_resp)
+        print("responses:", self.responses)
 
     def recognize_entities(self):
         er = EntityRecognition(self.msg, prior_obj=self.prior_obj)
-        ents, ent_ids = er.process()
-        print("entities and ids:", ents, ent_ids)
-        assert(len(ents)!=(ent_ids))
-        if len(ents) == 0:
-            return -1, -1
-        else:
-            return ents, ent_ids
+        ent_dict = er.process()
+        return ent_dict
+    
+    def recognize_predicate(self, ent_dict):
+        # remove entities from predicates
+        msg = self.msg
+        for label in ent_dict:
+            id = ent_dict[label]["id"]
+            if id != -1:
+                msg = msg.replace(label, "")
+        # recognize predicates
+        all_preds = self.prior_obj.get_all_predicates()
+        rp = RecognizePredicate(msg, prior=all_preds)
+        preds, pred_ids = rp.get_predicate_ID()
+        print(preds)
+        return pred_ids
+
 
     def chooseResponse(self):
-        print("responses:", self.responses)
         if len(self.responses) > 1:
-            response = random.choice(self.responses)
-            response = "I think it is "+response
+            if self.from_embedding:
+                core = "According to embeddings, your answers are"
+            else:
+                core = "I think it's "
+            for i, response in enumerate(self.responses):
+                if i == 0:
+                    core = core + " " + response
+                else:
+                    core = core + ", " + response
+            response = core
         elif len(self.responses) == 0:
-            response = default_response
+            response = random.choice(DEFAULT_RESPONSES)
         elif len(self.responses) == 1:
             response = self.responses[0]
-            response = "I think it is "+response
+            if self.from_embedding:
+                response = "The answer suggested by embedding is: " + response + "."
+            else:
+                response = "I think it is " + response + "."
         self._response = response
 
     def getResponse(self):

@@ -1,150 +1,88 @@
-import os
-import pandas as pd
-import spacy  # version 3.0.6'
-from Levenshtein import distance
+import difflib
+from flair.data import Sentence
+from Constants import SPECIAL_CHARS
+
+# TODO: If there is a comma in entity recog then split the comma and then search for id
 
 class EntityRecognition:
-    def __init__(self, input, prior_obj=None, humans=None, movies=None, entities=None):
+    def __init__(self, input, prior_obj=None):
         self.input = input
-        if prior_obj is not None:
-            self.humans = prior_obj.getHumans()
-            self.movies = prior_obj.getMovies()
-            self.entities_csv = prior_obj.getAllEntities()
-        if humans is not None:
-            self.humans = humans
-        if movies is not None:
-            self.movies = movies
-        if entities is not None:
-            self.entities_csv = entities
+        self.prior_obj = prior_obj
+        self.ner = prior_obj.getNERModel()
+        self.emb = prior_obj.get_emb_obj()
+        for char in SPECIAL_CHARS:
+            self.input = self.input.replace(char, "")
     
     def process(self):
-        ent, ent_id = light_entity_recog(self.input)
-        if len(ent_id) > 0 and None not in ent_id:
-            return ent, ent_id 
-        else:
-            ent, ent_id = medium_entity_recog(self.input, self.humans, self.movies, self.entities_csv)
-            if len(ent) > 0:
-                return ent, ent_id
-            else:
-                print("Suggestion: apply another entity recognition")
-        return [], []
-
-def light_entity_recog(input):
-    entity_ids = []
-    entity_names = []
-    nlp = spacy.load("en_core_web_sm")
-    nlp.add_pipe("entityfishing")
-    doc = nlp(input)
-    for ent in doc.ents:
-        entity_names.append(ent.text)
-        entity_ids.append(ent._.kb_qid)
-    return entity_names, entity_ids
-
-def get_movies_nlp(input):
-    nlp = spacy.load("en_core_web_lg")
-    doc = nlp(input)
-    names = []
-    for ent in doc.ents:
-        names.append(ent.text)
-    print(names)
-    return names
-
-def search_in_csv_files(entity, doc):
-    doc["distance"] = doc["names"].apply(lambda x: distance(x, entity.lower()))
-    df = doc.loc[doc["distance"]<2]
-    if len(df) == 1:
-        ids = df["ids"].values
-        id = ids[0]
-        return id
-    if len(df) > 1:
-        distances = list(df["distance"])
-        ids = list(df["ids"])
-        index = distances.index(min(distances))
-        id = ids[index]
-        return id
-    else:
-        return -1
-
-def medium_entity_recog(input, humans, movies, entities_csv):
-    entities = get_movies_nlp(input)
-    final_entities = []
-    ids = []
-    if len(entities) > 0:
-        for entity in entities:
-            movie_id = search_in_csv_files(entity, movies)
-            if movie_id == -1:
-                human_id = search_in_csv_files(entity, humans)
-                if human_id == -1:
-                    entity_id = search_in_csv_files(entity, entities_csv)
-                    if entity_id == -1:
-                        final_entities.append(entity)
-                        ids.append(-1)
-                    else:
-                        final_entities.append(entity)
-                        ids.append(entity_id)
-                else:
-                    final_entities.append(entity)
-                    ids.append(human_id)
-            else:
-                final_entities.append(entity)
-                ids.append(movie_id)
-    return final_entities, ids
-
-def load_default_data():
-    foldername = "data/all_data_folder"
-    print("loading humans data")
-    humans = pd.read_csv(os.path.join(foldername, "all_humans.csv"))
-    humans["names"] = humans["names"].apply(lambda x: x.lower())
-    print("loading movies data")
-    movies = pd.read_csv(os.path.join(foldername, "all_movies.csv"))
-    movies["names"] = movies["names"].apply(lambda x: x.lower())
-    return humans, movies
-
-def load_all_entities():
-    foldername = "data/"
-    print("loading all entity data")
-    all_entities = pd.read_csv(os.path.join(foldername, "entity_mappings.csv"))
-    all_entities = all_entities.astype(str)
-    all_entities["label"] = all_entities["label"].apply(lambda x: x.lower())
-    all_entities.rename(columns = {'label':'names'}, inplace = True)
-    all_entities.rename(columns = {'wiki_code':'ids'}, inplace = True)
-    all_entities.drop(columns='description', inplace=True)
-    return all_entities
-
-if __name__=="__main__":
-    questions = [
-    "Who is the director of Good Will Hunting?",
-    "Who directed The Bridge on the River Kwai?",
-    "Who is the director of Star Wars: Episode VI - Return of the Jedi?",
-    "Show me a picture of Halle Berry.",
-    "What does Julia Roberts look like?",
-    "Let me know what Sandra Bullock look like?",
-    "Who is the director of Game of Thrones?",
-    "Do you have any recommendation for Horror movies?",
-    "Recommend me some movies similar to The Masked Gang.",
-    "Recommend movies similar to X-Men: First Class",
-    "Recommend movies similar to Pocahontas, The Beauty and the Beast, The Lion King.",
-    "Recommend me movies similar to The Bridge on the River Kwai",
-    "Who is the screenwriter of The Masked Gang: Cyprus?",
-    "What is the MPAA film rating of Weathering with You?",
-    "What is the genre of Good Neighbors?",
-    "What is the box office of The Princess and the Frog?",
-    "Can you tell me the publication date of Tom Meets Zizou?",
-    "Who is the executive producer of X-Men: First Class?"
-    ]
-    humans, movies = load_default_data()
-    entities = load_all_entities()
-    for question in questions:
-        print(question)
-        er = EntityRecognition(question, humans = humans, movies=movies, entities=entities)
-        ent, ent_ids = er.process()
-        print(ent, ent_ids)
-
-
-
-
-
-
+        self.ent_dict = self.recog_ent_label()
+        self.clean_ent_labels()
         
-
+        for label in self.ent_dict:
+            id = self.emb.getIDfromLabel(label)
+            if id == -1:
+                id = self.get_id_from_loaded_data(label)
+            self.ent_dict[label]["id"] = id
+        print(self.ent_dict)
+        return self.ent_dict
     
+    def clean_ent_labels(self):
+        new_dict = self.ent_dict.copy()
+        for label in self.ent_dict:
+            if "box office" in label:
+                new_label = label.replace("box office", "")
+                new_dict[new_label] = new_dict.pop(label)
+        self.ent_dict = new_dict.copy()
+
+    def recog_ent_label(self):
+        flair_input = Sentence(self.input)
+        self.ner.predict(flair_input)
+        prediction = flair_input.get_spans('ner')
+        tags = {}
+        for entity in prediction:
+            tags[entity.text] = {}
+            tags[entity.text]["tag"] = entity.tag
+        return tags
+    
+    def match_id(self, label, df, cutoff=0.6):
+        id = -1
+        df['names'] = df['names'].apply(lambda x: x.strip())
+        closest_matches = difflib.get_close_matches(label, df['names'].tolist(), cutoff=cutoff)
+        if len(closest_matches)>0:
+            closest_match = closest_matches[0]
+            id = df['ids'][df['names']==closest_match].tolist()
+            return id[0]
+        return id
+    
+    def get_id_from_loaded_data(self, label):
+        id = -1
+        if self.ent_dict[label]["tag"] == "TITLE":
+            print("search in movies")
+            movies_df = self.prior_obj.getMovies()
+            id = self.match_id(label, movies_df)
+            if id == -1:
+                id = self.match_id(label, movies_df, cutoff=0.6)
+        elif self.ent_dict[label]["tag"] == "ACTOR":
+            print("search in humans")
+            human_df = self.prior_obj.getHumans()
+            id = self.match_id(label, human_df)
+            if id == -1:
+                id = self.match_id(label, human_df, cutoff=0.6)
+        elif self.ent_dict[label]["tag"] == "GENRE":
+            print("search in genres")
+            genre_df = self.prior_obj.getGenre()
+            id = self.match_id(label, genre_df)
+            if id == -1:
+                id = self.match_id(label, genre_df, cutoff=0.6)
+        elif self.ent_dict[label]["tag"] == "CHARACTER":
+            print("searching in characters")
+            char_df = self.prior_obj.getChars()
+            id = self.match_id(label, char_df)
+            if id == -1:
+                id = self.match_id(label, char_df, cutoff=0.6)
+        else:
+            print("searching in full list")
+            all_df = self.prior_obj.getAllEntities()
+            id = self.match_id(label, all_df)
+            if id == -1:
+                id = self.match_id(label, all_df, cutoff=0.6)
+        return id

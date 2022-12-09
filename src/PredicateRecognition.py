@@ -1,5 +1,6 @@
 import re
 import Constants
+import difflib
 import pandas as pd
 from nltk.corpus import stopwords
 from Levenshtein import distance
@@ -14,16 +15,22 @@ class RecognizePredicate:
             self.input_list = self.get_cleaned_input(input)
     
     def get_predicate_ID(self):
-        predicates, IDs = self.light_search()
+        predicates, IDs = self.find_similar_words(cutoff=0.6)
         if len(predicates) >= 1:
+            print("returning from find_similar_words")
             return (predicates, IDs)
         else:
-            predicates, IDs = self.medium_search()
+            predicates, IDs = self.light_search()
             if len(predicates) >= 1:
+                print("returning from light_search")
                 return (predicates, IDs)
             else:
-                predicates, IDs = self.entensive_search(self.prior)
-                return (predicates, IDs)
+                predicates, IDs = self.medium_search()
+                if len(predicates) >= 1:
+                    return (predicates, IDs)
+                else:
+                    predicates, IDs = self.entensive_search(self.prior)
+                    return (predicates, IDs)
 
     def get_cleaned_input(self, input):
         sentence = input.lower()
@@ -77,6 +84,27 @@ class RecognizePredicate:
                 ids.extend(df["ID"].values)
         return predicates, ids
 
+    def find_similar_words(self, cutoff=0.6):
+        predicates = []
+        ids = []
+        df = self.prior
+        for word in self.input_list:
+            id = self.match_id(word, df, cutoff=cutoff)
+            if id != -1:
+                predicates.append(word)
+                ids.append(id)
+        return predicates, ids
+
+    def match_id(self, label, df, cutoff=0.6):
+        id = -1
+        df['predicate'] = df['predicate'].apply(lambda x: x.strip())
+        closest_matches = difflib.get_close_matches(label, df['predicate'].tolist(), cutoff=cutoff)
+        if len(closest_matches)>0:
+            closest_match = closest_matches[0]
+            id = df['ID'][df['predicate']==closest_match].tolist()
+            return id[0]
+        return id
+    
 
 
 

@@ -31,10 +31,13 @@ class QuestionRecognition:
                 "Show how Adam Levine look like",
                 "What does Adam Levine look like",
                 "Image of Amitabh Bachchan?",
-                "Images of Julia Roberts?"
+                "Images of Julia Roberts?",
+                "Show me an image of Rahul Gandhi",
+                "Can you show me an image of Narendra Modi"
             ],
             "recommendation":[
                 "Recommend movies similar to Hamlet and Othello.",
+                "Can you please recommend me some movies similar to The Lion King?",
                 "Give that I like The Lion King, Pocahontas, and The Beauty and the Beast, can you recommend some movies?",
                 "Recommend movies like Nightmare on Elm Street, Friday the 13th, and Halloween.",
                 "Recommendations for thriller movies",

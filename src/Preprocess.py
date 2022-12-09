@@ -1,11 +1,12 @@
+import json
 import os
 import pandas as pd
 import Constants
 from nltk.corpus import stopwords
+from flair.models import SequenceTagger
 from Graphs import Graphs
 from QuestionRecognition import QuestionRecognition
 from Embeddings import Embeddings
-
 
 class Preprocess:
     def __init__(self):
@@ -13,9 +14,15 @@ class Preprocess:
         self.load_all_entities()
         self.load_predicates()
         self.load_default_data()
+        self.load_NER_model()
+        self.load_images()
         self.question_model = QuestionRecognition()
         self.g = Graphs()
         self.embed_obj = Embeddings(self.g.get_graph())
+    
+    def load_NER_model(self):
+        print("loading NER model")
+        self.ner_model = SequenceTagger.load("models/ner.pt")
     
     def load_default_data(self):
         foldername = "data/all_data_folder"
@@ -45,6 +52,14 @@ class Preprocess:
         self.awards["names"] = self.awards["names"].apply(lambda x: x.lower())
         self.awards["ids"] = self.awards["ids"].apply(lambda x: x.split("/")[-1])
     
+    def load_images(self):
+        path = "data/images.json"
+        f = open(path)
+        self.images = json.load(f)
+    
+    def getImages(self):
+        return self.images
+
     def load_all_entities(self):
         foldername = "data/"
         print("loading all entity data")
@@ -63,9 +78,21 @@ class Preprocess:
     
     def getMovies(self):
         return self.movies
+    
+    def getGenre(self):
+        return self.genre
+    
+    def getChars(self):
+        return self.chars
+    
+    def getAwards(self):
+        return self.awards
 
     def getDefaultData(self):
         return self.humans, self.movies, self.chars, self.genre, self.awards
+    
+    def getNERModel(self):
+        return self.ner_model
 
     def load_predicates(self):
         self.df_pred = pd.DataFrame(columns=['ID', 'predicate'])

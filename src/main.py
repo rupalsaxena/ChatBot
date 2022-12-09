@@ -2,6 +2,7 @@ from Algorithm import getResponse
 from Preprocess import Preprocess
 
 questions = [
+"Hello",
 "Who is the director of Good Will Hunting?",
 "Who directed The Bridge on the River Kwai?",
 "Who is the director of Star Wars: Episode VI - Return of the Jedi?",
@@ -20,9 +21,18 @@ questions = [
 "What is the box office of The Princess and the Frog?",
 "Can you tell me the publication date of Tom Meets Zizou?",
 "Who is the executive producer of X-Men: First Class?",
+"Who is the director of Lord of the Rings?"
 ]
 
 prior_obj = Preprocess()
 for question in questions:
+    print("  ")
+    print("  ")
+    print("  ")
+    print("  ")
+    print("  ")
+    print("  ")
+    print("  ")
+    print("  ")
     print("Question:", question)
     reply = getResponse(question, prior_obj)
