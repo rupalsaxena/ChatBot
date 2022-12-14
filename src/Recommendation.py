@@ -1,14 +1,16 @@
 import random
+from Levenshtein import distance
 from EntityRecognition import EntityRecognition
-
-#default_response = "I don't find any recommendation for you. Can I help you with something else?"
 
 DEFAULT_RESPONSES = [
     "I don't find any suitable recommendation for you! Do you want me to look for something else?",
     "I don't find any recommendation for you. Can I help you with something else?",
     "I am not sure I understand it properly. Try to rephrase it.",
 ]
-# handle genre recommendation serperately 
+
+# TODO: handle genre recommendation serperately 
+# TODO: movies for humans
+
 class Recommend:
     def __init__(self, msg, graph, prior_obj):
         self.msg = msg
@@ -23,8 +25,13 @@ class Recommend:
     
     def process(self):
         for label in self.ent_dict:
-            self.responses.extend(self.embed.find_similar_entities(self.ent_dict[label]["id"]))
-        print(self.responses)
+            if self.ent_dict[label]["tag"] == "ACTOR":
+                recos = self.graph.queryActor(self.ent_dict[label]["id"])
+            elif self.ent_dict[label]["tag"] == "GENRE":
+                recos = self.graph.queryMoviesfromGenres(self.ent_dict[label]["id"])
+            else:
+                recos = self.embed.find_similar_entities(self.ent_dict[label]["id"])
+            self.responses.extend(recos)
 
     def recognize_entities(self):
         er = EntityRecognition(self.msg, prior_obj=self.prior_obj)
@@ -32,8 +39,10 @@ class Recommend:
         return ent_dict
 
     def chooseResponse(self):
-        print("responses:", self.responses)
         if len(self.responses) > 1:
+            if len(self.responses) > 6:
+                random.shuffle(self.responses)
+                self.responses = self.responses[0:5]
             init_resp = "Here are some recommendations:"
             response=""
             for i, resp in enumerate(self.responses):

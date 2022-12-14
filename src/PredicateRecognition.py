@@ -5,7 +5,17 @@ import pandas as pd
 from nltk.corpus import stopwords
 from Levenshtein import distance
 
-# TODO: Make algo strong enough for spelling mistakes
+COMMON_PREDICATES = {
+    "box office": "P2142",
+    "MPAA rating": "P1657",
+    "MPAA film rating": "P1657",
+    "MPA rating": "P1657",
+    "MPA film rating": "P1657",
+    "FSK film rating": "P1981",
+    "FSK rating": "P1981",
+    "cast member": "P161" ,
+    "publication date": "P577"
+}
 
 class RecognizePredicate:
     def __init__(self, input, prior=None):
@@ -15,22 +25,24 @@ class RecognizePredicate:
             self.input_list = self.get_cleaned_input(input)
     
     def get_predicate_ID(self):
-        predicates, IDs = self.find_similar_words(cutoff=0.6)
+        predicates, IDs = self.handle_common_predicates()
         if len(predicates) >= 1:
-            print("returning from find_similar_words")
             return (predicates, IDs)
         else:
-            predicates, IDs = self.light_search()
+            predicates, IDs = self.find_similar_words(cutoff=0.6)
             if len(predicates) >= 1:
-                print("returning from light_search")
                 return (predicates, IDs)
             else:
-                predicates, IDs = self.medium_search()
+                predicates, IDs = self.light_search()
                 if len(predicates) >= 1:
                     return (predicates, IDs)
                 else:
-                    predicates, IDs = self.entensive_search(self.prior)
-                    return (predicates, IDs)
+                    predicates, IDs = self.medium_search()
+                    if len(predicates) >= 1:
+                        return (predicates, IDs)
+                    else:
+                        predicates, IDs = self.entensive_search(self.prior)
+                        return (predicates, IDs)
 
     def get_cleaned_input(self, input):
         sentence = input.lower()
@@ -105,21 +117,20 @@ class RecognizePredicate:
             return id[0]
         return id
     
+    def handle_common_predicates(self):
+        predicates = []
+        ids = []
+        for common in COMMON_PREDICATES:
+            if common in self.msg:
+                predicates.append(common)
+                ids.append(COMMON_PREDICATES[common])
+        
+        if len(predicates)==0:
+            # search better
+            cleaned_msg = " ".join(word for word in self.input_list)
+            for common in COMMON_PREDICATES:
+                if distance(common, cleaned_msg) < 4:
+                    predicates.append(common)
+                    ids.append(COMMON_PREDICATES[common])
+        return predicates, ids
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    

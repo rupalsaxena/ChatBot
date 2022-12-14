@@ -2,10 +2,10 @@ import random
 from EntityRecognition import EntityRecognition
 
 DEFAULT_RESPONSE = [
-    "I am sorry but I don't find any suitable image.",
-    "I don't have image for this.",
-    "I looked into my Image dataset but unfortunaely I did not find any image for this.",
-    "I cannot find any image for you. Do you wanna see some other pictures?"
+    "I am sorry but I don't find any suitable results for you.",
+    "I don't have any results for this.",
+    "I looked into my dataset but unfortunately I did not find any results for this.",
+    "I cannot find any results for you. Do you have any other question for me?"
 ]
 
 class Multimedia:

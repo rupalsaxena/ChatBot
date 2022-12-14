@@ -94,48 +94,61 @@ class Preprocess:
     def getNERModel(self):
         return self.ner_model
 
-    def load_predicates(self):
-        self.df_pred = pd.DataFrame(columns=['ID', 'predicate'])
-        files = os.listdir(self.datapath)
-        for filename in files:
-            if filename.startswith("predicate"):
-                self.filepath = os.path.join(self.datapath, filename)
-                name = filename.split(".")[0]
-                if name == "predicate_1":
-                    self.df_pred = pd.concat([self.df_pred, self.load_pred_1()])
-                if name == "predicate_2":
-                    self.df_pred = pd.concat([self.df_pred, self.load_pred_2()])
-                if name == "predicate_3":
-                    self.df_pred = pd.concat([self.df_pred, self.load_pred_3()])
-        self.df_pred["predicate"] = self.df_pred["predicate"].apply(lambda x: str(x).lower())
-        self.df_pred = self.df_pred.drop_duplicates()
-        self.df_pred["list"] = self.df_pred["predicate"].apply(lambda x: self.remove_stopwords(x))
-        self.df_pred.dropna(inplace=True)
-        self.df_pred.reset_index(drop=True, inplace=True)
+    # def load_predicates(self):
+    #     self.df_pred = pd.DataFrame(columns=['ID', 'predicate'])
+    #     files = os.listdir(self.datapath)
+    #     for filename in files:
+    #         if filename.startswith("predicate"):
+    #             self.filepath = os.path.join(self.datapath, filename)
+    #             name = filename.split(".")[0]
+    #             if name == "predicate_1":
+    #                 self.df_pred = pd.concat([self.df_pred, self.load_pred_1()])
+    #             if name == "predicate_2":
+    #                 self.df_pred = pd.concat([self.df_pred, self.load_pred_2()])
+    #             if name == "predicate_3":
+    #                 self.df_pred = pd.concat([self.df_pred, self.load_pred_3()])
+    #     self.df_pred["predicate"] = self.df_pred["predicate"].apply(lambda x: str(x).lower())
+    #     self.df_pred = self.df_pred.drop_duplicates()
+    #     self.df_pred["list"] = self.df_pred["predicate"].apply(lambda x: self.remove_stopwords(x))
+    #     self.df_pred.dropna(inplace=True)
+    #     self.df_pred.reset_index(drop=True, inplace=True)
+    #     self.df_pred.to_csv(os.path.join(self.datapath, "all_predicates.csv"))
 
-    def load_pred_1(self):
-        df = pd.read_csv(self.filepath)
-        df.rename(columns={'Title':'predicate'}, inplace=True)
-        df = df[['ID','predicate']]
-        print("predicate file 1 loaded")
-        return df
+    def load_predicates(self):
+        print("loading all predicates")
+        self.df_pred = pd.read_csv("data/all_predicates.csv")
+        self.df_pred['predicate'] = self.df_pred['predicate'].apply(lambda x: str(x))
+
+    # def load_pred_1(self):
+    #     df = pd.read_csv(self.filepath)
+    #     df.rename(columns={'Title':'predicate'}, inplace=True)
+    #     df = df[['ID','predicate']]
+    #     print("predicate file 1 loaded")
+    #     return df
     
-    def load_pred_2(self):
-        df = pd.read_csv(self.filepath)
-        df.rename(columns={'label': 'predicate'}, inplace=True)
-        df.rename(columns={'wiki_code': 'ID'}, inplace=True)
-        df = df[['ID','predicate']]
-        print("predicate file 2 loaded")
-        return df
+    # def load_pred_2(self):
+    #     df = pd.read_csv(self.filepath)
+    #     df.rename(columns={'label': 'predicate'}, inplace=True)
+    #     df.rename(columns={'wiki_code': 'ID'}, inplace=True)
+    #     df = df[['ID','predicate']]
+    #     print("predicate file 2 loaded")
+    #     return df
     
-    def load_pred_3(self):
-        df = pd.read_csv(self.filepath)
-        df.rename(columns={'Property_pastedval': 'predicate'}, inplace=True)
-        df.rename(columns={'Name of Relation': 'ID'}, inplace=True)
-        df = df[['ID','predicate']]
-        df['predicate'] = df['predicate'].apply(lambda x: x.split("(")[0])
-        print("predicate file 3 loaded")
-        return df
+    # def load_pred_3(self):
+    #     df = pd.read_csv(self.filepath)
+    #     df.rename(columns={'Property_pastedval': 'predicate'}, inplace=True)
+    #     df.rename(columns={'Name of Relation': 'ID'}, inplace=True)
+    #     df = df[['ID','predicate']]
+    #     df['predicate'] = df['predicate'].apply(lambda x: x.split("(")[0])
+    #     print("predicate file 3 loaded")
+    #     return df
+    
+    # def load_pred_4(self):
+    #     df = pd.read_csv(self.filepath)
+    #     df["ID"] = df['Relation'].apply(lambda x: x.split("/")[-1])
+    #     df.rename(columns={'Label': 'predicate'}, inplace=True)
+    #     df = df[['ID','predicate']]
+    #     return df
     
     def get_all_predicates(self):
         return self.df_pred

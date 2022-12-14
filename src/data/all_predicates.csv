@@ -1,0 +1,274 @@
+,ID,predicate,list
+0,P6,head of government,"['head', 'government']"
+1,P17,country,['country']
+2,P19,place of birth,"['place', 'birth']"
+3,P20,place of death,"['place', 'death']"
+4,P21,sex or gender,"['sex', 'gender']"
+5,P22,father,['father']
+6,P25,mother,['mother']
+7,P26,spouse,['spouse']
+8,P27,country of citizenship,"['country', 'citizenship']"
+9,P30,continent,['continent']
+10,P31,instance of,['instance']
+11,P35,head of state,"['head', 'state']"
+12,P36,capital,['capital']
+13,P37,official language,"['official', 'language']"
+14,P40,child,['child']
+15,P47,shares border with,"['shares', 'border']"
+16,P50,author,['author']
+17,P54,member of sports team,"['member', 'sports', 'team']"
+18,P57,director,['director']
+19,P58,screenwriter,['screenwriter']
+20,P66,ancestral home,"['ancestral', 'home']"
+21,P69,educated at,['educated']
+22,P91,sexual orientation,"['sexual', 'orientation']"
+23,P97,noble title,"['noble', 'title']"
+24,P101,field of work,"['field', 'work']"
+25,P103,native language,"['native', 'language']"
+26,P106,occupation,['occupation']
+27,P108,employer,['employer']
+28,P112,founded by,['founded']
+29,P119,place of burial,"['place', 'burial']"
+30,P123,publisher,['publisher']
+31,P127,owned by,['owned']
+32,P131,located in the administrative territorial entity,"['located', 'administrative', 'territorial', 'entity']"
+33,P135,movement,['movement']
+34,P136,genre,['genre']
+35,P137,operator,['operator']
+36,P138,named after,['named']
+37,P140,religion or worldview,"['religion', 'worldview']"
+38,P144,based on,['based']
+39,P150,contains the administrative territorial entity,"['contains', 'administrative', 'territorial', 'entity']"
+40,P155,follows,['follows']
+41,P156,named after,['named']
+42,P157,killed by,['killed']
+43,P159,headquarters location,"['headquarters', 'location']"
+44,P161,cast member,"['cast', 'member']"
+45,P166,award received,"['award', 'received']"
+46,P170,creator,['creator']
+47,P172,ethnic group,"['ethnic', 'group']"
+48,P175,performer,['performer']
+49,P178,developer,['developer']
+50,P179,part of the series,"['part', 'series']"
+51,P180,depicts,['depicts']
+52,P190,twinned administrative body,"['twinned', 'administrative', 'body']"
+53,P195,collection,['collection']
+54,P205,basin country,"['basin', 'country']"
+55,P206,located in or next to body of water,"['located', 'next', 'body', 'water']"
+56,P241,military branch,"['military', 'branch']"
+57,P263,official residence,"['official', 'residence']"
+58,P272,production company,"['production', 'company']"
+59,P275,copyright license,"['copyright', 'license']"
+60,P276,location,['location']
+61,P279,subclass of,['subclass']
+62,P287,designed by,['designed']
+63,P291,place of publication,"['place', 'publication']"
+64,P306,operating system,"['operating', 'system']"
+65,P344,director of photography,"['director', 'photography']"
+66,P361,part of,['part']
+67,P364,original language of film or tv show,"['original', 'language', 'film', 'tv', 'show']"
+68,P366,has use,['use']
+69,P371,presenter,['presenter']
+70,P400,platform,['platform']
+71,P407,language of work or name,"['language', 'work', 'name']"
+72,P425,field of this occupation,"['field', 'occupation']"
+73,P437,distribution format,"['distribution', 'format']"
+74,P449,original broadcaster,"['original', 'broadcaster']"
+75,P451,unmarried partner,"['unmarried', 'partner']"
+76,P452,industry,['industry']
+77,P460,said to be the same as,['said']
+78,P461,opposite of,['opposite']
+79,P462,color,['color']
+80,P463,member of,['member']
+81,P466,occupant,['occupant']
+82,P479,input method,"['input', 'method']"
+83,P485,archives at,['archives']
+84,P495,country of origin,"['country', 'origin']"
+85,P509,cause of death,"['cause', 'death']"
+86,P527,has part,['part']
+87,P530,diplomatic relation,"['diplomatic', 'relation']"
+88,P551,residence,['residence']
+89,P607,conflict,['conflict']
+90,P629,edition or translation of,"['edition', 'translation']"
+91,P641,sport,['sport']
+92,P669,located on street,"['located', 'street']"
+93,P674,characters,['characters']
+94,P706,located in/on physical feature,"['located', 'in/on', 'physical', 'feature']"
+95,P710,participant,['participant']
+96,P725,voice actor,"['voice', 'actor']"
+97,P735,given name,"['given', 'name']"
+98,P737,influenced by,['influenced']
+99,P740,location of formation,"['location', 'formation']"
+100,P747,has edition or translation,"['edition', 'translation']"
+101,P749,parent organization,"['parent', 'organization']"
+102,P750,distributed by,['distributed']
+103,P767,contributor to the creative work or subject,"['contributor', 'creative', 'work', 'subject']"
+104,P793,significant event,"['significant', 'event']"
+105,P800,notable work,"['notable', 'work']"
+106,P802,student,['student']
+107,P825,dedicated to,['dedicated']
+108,P828,has cause,['cause']
+109,P832,public holiday,"['public', 'holiday']"
+110,P840,narrative location,"['narrative', 'location']"
+111,P915,filming location,"['filming', 'location']"
+112,P921,main subject,"['main', 'subject']"
+113,P931,place served by transport hub,"['place', 'served', 'transport', 'hub']"
+114,P937,work location,"['work', 'location']"
+115,P941,inspired by,['inspired']
+116,P945,allegiance,['allegiance']
+117,P1001,applies to jurisdiction,"['applies', 'jurisdiction']"
+118,P1027,conferred by,['conferred']
+119,P1029,crew member,"['crew', 'member']"
+120,P1037,director / manager,"['director', '/', 'manager']"
+121,P1038,relative,['relative']
+122,P1040,film editor,"['film', 'editor']"
+123,P1050,medical condition,"['medical', 'condition']"
+124,P1056,product or material produced,"['product', 'material', 'produced']"
+125,P1066,student of,['student']
+126,P1080,from narrative universe,"['narrative', 'universe']"
+127,P1142,political ideology,"['political', 'ideology']"
+128,P1165,home world,"['home', 'world']"
+129,P1196,manner of death,"['manner', 'death']"
+130,P1269,facet of,['facet']
+131,P1299,depicted by,['depicted']
+132,P1327,partner in business or sport,"['partner', 'business', 'sport']"
+133,P1343,described by source,"['described', 'source']"
+134,P1344,participant in,['participant']
+135,P1346,winner,['winner']
+136,P1365,replaces,['replaces']
+137,P1366,replaced by,['replaced']
+138,P1376,capital of,['capital']
+139,P1382,partially coincident with,"['partially', 'coincident']"
+140,P1399,convicted of,['convicted']
+141,P1411,nominated for,['nominated']
+142,P1412,"languages spoken, written or signed","['languages', 'spoken,', 'written', 'signed']"
+143,P1416,affiliation,['affiliation']
+144,P1429,has pet,['pet']
+145,P1431,executive producer,"['executive', 'producer']"
+146,P1433,published in,['published']
+147,P1434,takes place in fictional universe,"['takes', 'place', 'fictional', 'universe']"
+148,P1441,present in work,"['present', 'work']"
+149,P1445,fictional universe described in,"['fictional', 'universe', 'described']"
+150,P1455,list of works,"['list', 'works']"
+151,P1532,country for sport,"['country', 'sport']"
+152,P1542,has effect,['effect']
+153,P1552,has quality,['quality']
+154,P1576,lifestyle,['lifestyle']
+155,P1589,lowest point,"['lowest', 'point']"
+156,P1657,mpa film rating,"['mpa', 'film', 'rating']"
+157,P1809,choreographer,['choreographer']
+158,P1830,owner of,['owner']
+159,P1875,represented by,['represented']
+160,P1877,after a work by,['work']
+161,P1889,different from,['different']
+162,P1981,fsk film rating,"['fsk', 'film', 'rating']"
+163,P1995,health specialty,"['health', 'specialty']"
+164,P2061,aspect ratio ,"['aspect', 'ratio', '']"
+165,P2079,fabrication method,"['fabrication', 'method']"
+166,P2283,uses,['uses']
+167,P2341,indigenous to,['indigenous']
+168,P2348,time period,"['time', 'period']"
+169,P2360,intended public,"['intended', 'public']"
+170,P2363,nmhh film rating,"['nmhh', 'film', 'rating']"
+171,P2408,set in period,"['set', 'period']"
+172,P2416,sports discipline competed in,"['sports', 'discipline', 'competed']"
+173,P2438,narrator,['narrator']
+174,P2515,costume designer,"['costume', 'designer']"
+175,P2541,operating area,"['operating', 'area']"
+176,P2546,sidekick of,['sidekick']
+177,P2554,production designer,"['production', 'designer']"
+178,P2563,superhuman feature or ability,"['superhuman', 'feature', 'ability']"
+179,P2629,bbfc rating,"['bbfc', 'rating']"
+180,P2632,place of detention,"['place', 'detention']"
+181,P2637,rars rating,"['rars', 'rating']"
+182,P2650,interested in,['interested']
+183,P2684,kijkwijzer rating,"['kijkwijzer', 'rating']"
+184,P2747,filmiroda rating,"['filmiroda', 'rating']"
+185,P2756,eirin film rating,"['eirin', 'film', 'rating']"
+186,P2758,cnc film rating ,"['cnc', 'film', 'rating', '']"
+187,P2860,cites work,"['cites', 'work']"
+188,P2936,language used,"['language', 'used']"
+189,P3092,film crew member,"['film', 'crew', 'member']"
+190,P3095,practiced by,['practiced']
+191,P3156,australian classification,"['australian', 'classification']"
+192,P3174,art director,"['art', 'director']"
+193,P3216,classind rating,"['classind', 'rating']"
+194,P3275,storyboard artist,"['storyboard', 'artist']"
+195,P3300,musical conductor,"['musical', 'conductor']"
+196,P3301,broadcast by,['broadcast']
+197,P3306,icaa rating,"['icaa', 'rating']"
+198,P3342,significant person,"['significant', 'person']"
+199,P3373,sibling,['sibling']
+200,P3402,cnc film rating ,"['cnc', 'film', 'rating', '']"
+201,P3428,incaa film rating,"['incaa', 'film', 'rating']"
+202,P3448,stepparent,['stepparent']
+203,P3650,jmk film rating,"['jmk', 'film', 'rating']"
+204,P3803,original film format,"['original', 'film', 'format']"
+205,P3818,kmrb film rating,"['kmrb', 'film', 'rating']"
+206,P3834,rtc film rating,"['rtc', 'film', 'rating']"
+207,P3842,located in the present-day administrative territorial entity,"['located', 'present-day', 'administrative', 'territorial', 'entity']"
+208,P3931,copyright holder,"['copyright', 'holder']"
+209,P4437,fpb rating,"['fpb', 'rating']"
+210,P4584,first appearance,"['first', 'appearance']"
+211,P4608,scenographer,['scenographer']
+212,P4805,make-up artist,"['make-up', 'artist']"
+213,P4908,season,['season']
+214,P4969,derivative work,"['derivative', 'work']"
+215,P5021,assessment,['assessment']
+216,P5028,sound designer,"['sound', 'designer']"
+217,P5072,presented in,['presented']
+218,P5096,member of the crew of,"['member', 'crew']"
+219,P5150,igac rating,"['igac', 'rating']"
+220,P5152,kavi rating,"['kavi', 'rating']"
+221,P5201,imda rating,"['imda', 'rating']"
+222,P5389,permanent resident of,"['permanent', 'resident']"
+223,P5940,plot expanded in,"['plot', 'expanded']"
+224,P5970,medierådet rating,"['medierådet', 'rating']"
+225,P6166,quotes work,"['quotes', 'work']"
+226,P6216,copyright status,"['copyright', 'status']"
+227,P6275,copyright representative,"['copyright', 'representative']"
+228,P6379,has works in the collection,"['works', 'collection']"
+229,P6658,rcq classification,"['rcq', 'classification']"
+230,P6886,writing language,"['writing', 'language']"
+231,P6942,animator,['animator']
+232,P6962,narrative motif,"['narrative', 'motif']"
+233,P7047,enemy of,['enemy']
+234,P7327,oflc classification,"['oflc', 'classification']"
+235,P7573,ifco rating,"['ifco', 'rating']"
+236,P7936,business model,"['business', 'model']"
+237,P7937,form of creative work,"['form', 'creative', 'work']"
+238,P7959,historic county,"['historic', 'county']"
+239,P8345,media franchise,"['media', 'franchise']"
+240,P8371,"references work, tradition or theory","['references', 'work,', 'tradition', 'theory']"
+241,P8411,set in environment,"['set', 'environment']"
+242,P8670,character designer,"['character', 'designer']"
+243,P8874,hong kong film rating,"['hong', 'kong', 'film', 'rating']"
+244,P8889,mtrcb rating,"['mtrcb', 'rating']"
+245,P9086,bamid film rating,"['bamid', 'film', 'rating']"
+246,P9215,set during recurring event,"['set', 'recurring', 'event']"
+247,P577,publication date,"['publication', 'date']"
+248,tag,nan,['nan']
+249,P2758,cnc film rating (france),"['cnc', 'film', 'rating', '(france)']"
+250,P2142,box office,"['box', 'office']"
+251,description,nan,['nan']
+252,P1029,crew member(s),"['crew', 'member(s)']"
+253,rdf-schema#label,nan,['nan']
+254,P3402,cnc film rating (romania),"['cnc', 'film', 'rating', '(romania)']"
+255,P527,has part(s),['part(s)']
+256,P18,image,['image']
+257,P156,followed by,['followed']
+258,P345,imdb id,"['imdb', 'id']"
+259,P2061,aspect ratio (w:h),"['aspect', 'ratio', '(w:h)']"
+260,P1476,title,['title']
+261,P162,producer,['producer']
+262,P3383,film poster,"['film', 'poster']"
+263,P10,video,['video']
+264,P86,composer,['composer']
+265,P1881,list of characters,"['list', 'characters']"
+266,P406,soundtrack release,"['soundtrack', 'release']"
+267,P2208,average shot length,"['average', 'shot', 'length']"
+268,P1638,working title,"['working', 'title']"
+269,P2130,cost,['cost']
+270,P2047,duration,['duration']
+271,P444,review score,"['review', 'score']"
+272,P6657,chvrs classification,"['chvrs', 'classification']"

@@ -9,6 +9,9 @@ from Preprocess import Preprocess
 url = 'https://speakeasy.ifi.uzh.ch'
 listen_freq = 1
 
+ENTRY_MSG = "Hello, I am Griot. Type HELP in chat box to understand the types of questions I can answer! Looking forward to interact with you :D"
+DEFAULT_MSG = "I don't understand you. Can you rephrase it?"
+
 
 class DemoBot:
     def __init__(self, username, password, prior_obj):
@@ -28,7 +31,7 @@ class DemoBot:
                     room_id = room['uid']
                     if not self.chat_state[room_id]['initiated']:
                         # send a welcome message and get the alias of the agent in the chatroom
-                        self.post_message(room_id=room_id, session_token=self.session_token, message='Hi, you can send me any message and check if it is echoed in {} seconds.'.format(listen_freq))
+                        self.post_message(room_id=room_id, session_token=self.session_token, message=ENTRY_MSG.format(listen_freq))
                         self.chat_state[room_id]['initiated'] = True
                         self.chat_state[room_id]['my_alias'] = room['alias']
 
@@ -44,9 +47,10 @@ class DemoBot:
                             if message['ordinal'] not in self.chat_state[room_id]['messages']:
                                 self.chat_state[room_id]['messages'][message['ordinal']] = message
                                 print('\t- Chatroom {} - new message #{}: \'{}\' - {}'.format(room_id, message['ordinal'], message['message'], self.get_time()))
-
-                                ##### You should call your agent here and get the response message #####
-                                reply = getResponse(message["message"], self.prior_obj)
+                                try:
+                                    reply = getResponse(message["message"], self.prior_obj)
+                                except:
+                                    reply = DEFAULT_MSG
                                 self.post_message(room_id=room_id, session_token=self.session_token, message=reply)
                                 # self.post_message(room_id=room_id, session_token=self.session_token, message='Got your message: \'{}\' at {}.'.format(message['message'], self.get_time()))
             time.sleep(listen_freq)

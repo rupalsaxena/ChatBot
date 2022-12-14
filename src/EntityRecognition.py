@@ -2,8 +2,6 @@ import difflib
 from flair.data import Sentence
 from Constants import SPECIAL_CHARS
 
-# TODO: If there is a comma in entity recog then split the comma and then search for id
-
 class EntityRecognition:
     def __init__(self, input, prior_obj=None):
         self.input = input
@@ -31,6 +29,11 @@ class EntityRecognition:
             if "box office" in label:
                 new_label = label.replace("box office", "")
                 new_dict[new_label] = new_dict.pop(label)
+            if "," in label:
+                entities = label.split(",")
+                for entity in entities:
+                    new_dict[entity] = {}
+                    new_dict[entity]["tag"] = self.ent_dict[label]["tag"]
         self.ent_dict = new_dict.copy()
 
     def recog_ent_label(self):
@@ -55,34 +58,36 @@ class EntityRecognition:
     
     def get_id_from_loaded_data(self, label):
         id = -1
+        if self.ent_dict[label]["tag"] == "RATING":
+            return id
         if self.ent_dict[label]["tag"] == "TITLE":
             print("search in movies")
             movies_df = self.prior_obj.getMovies()
-            id = self.match_id(label, movies_df)
+            id = self.match_id(label.lower(), movies_df)
             if id == -1:
-                id = self.match_id(label, movies_df, cutoff=0.6)
+                id = self.match_id(label.lower(), movies_df, cutoff=0.4)
         elif self.ent_dict[label]["tag"] == "ACTOR":
             print("search in humans")
             human_df = self.prior_obj.getHumans()
-            id = self.match_id(label, human_df)
+            id = self.match_id(label.lower(), human_df)
             if id == -1:
-                id = self.match_id(label, human_df, cutoff=0.6)
+                id = self.match_id(label.lower(), human_df, cutoff=0.4)
         elif self.ent_dict[label]["tag"] == "GENRE":
             print("search in genres")
             genre_df = self.prior_obj.getGenre()
-            id = self.match_id(label, genre_df)
+            id = self.match_id(label.lower(), genre_df)
             if id == -1:
-                id = self.match_id(label, genre_df, cutoff=0.6)
+                id = self.match_id(label.lower(), genre_df, cutoff=0.4)
         elif self.ent_dict[label]["tag"] == "CHARACTER":
             print("searching in characters")
             char_df = self.prior_obj.getChars()
-            id = self.match_id(label, char_df)
+            id = self.match_id(label.lower(), char_df)
             if id == -1:
-                id = self.match_id(label, char_df, cutoff=0.6)
+                id = self.match_id(label.lower(), char_df, cutoff=0.4)
         else:
             print("searching in full list")
             all_df = self.prior_obj.getAllEntities()
-            id = self.match_id(label, all_df)
+            id = self.match_id(label.lower(), all_df)
             if id == -1:
-                id = self.match_id(label, all_df, cutoff=0.6)
+                id = self.match_id(label.lower(), all_df, cutoff=0.4)
         return id

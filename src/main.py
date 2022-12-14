@@ -2,8 +2,9 @@ from Algorithm import getResponse
 from Preprocess import Preprocess
 
 questions = [
+"HeLp",
 "Hello",
-"Who is the director of Good Will Hunting?",
+"Who is the director of GOOD WILL Hunting?",
 "Who directed The Bridge on the River Kwai?",
 "Who is the director of Star Wars: Episode VI - Return of the Jedi?",
 "Show me a picture of Halle Berry.",
@@ -21,7 +22,11 @@ questions = [
 "What is the box office of The Princess and the Frog?",
 "Can you tell me the publication date of Tom Meets Zizou?",
 "Who is the executive producer of X-Men: First Class?",
-"Who is the director of Lord of the Rings?"
+"Who is the director of Lord of the Rings?",
+"Recommend movies like Nightmare on Elm Street, Friday the 13th, and Halloween.",
+"Recommend movies similar to Hamlet and Othello.",
+"Recommend me some movies of Priyanka Chopra",
+"Recommend me some movies of Sandra Bullock"
 ]
 
 prior_obj = Preprocess()

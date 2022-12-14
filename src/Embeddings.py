@@ -6,12 +6,6 @@ import rdflib
 import pandas as pd
 from sklearn.metrics import pairwise_distances
 
-"""
-TODO: remove actual entity from embeded recommendation
-"""
-
-
-# define some prefixes
 WD = rdflib.Namespace('http://www.wikidata.org/entity/')
 WDT = rdflib.Namespace('http://www.wikidata.org/prop/direct/')
 DDIS = rdflib.Namespace('http://ddis.ch/atai/')
@@ -62,7 +56,7 @@ class Embeddings:
             most_likely = dist.argsort()
             most_likely = most_likely[1:10]
             random.shuffle(most_likely)
-            most_likely = most_likely[1:5]
+            most_likely = most_likely[0:5]
 
             df = pd.DataFrame([
                 (
@@ -73,8 +67,6 @@ class Embeddings:
                 )
                 for rank, idx in enumerate(most_likely)],
                 columns=('Entity', 'Label', 'Score', 'Rank'))
-            print(id)
-            print(df)
             return df['Label'].values
         except:
             print("embeddings did not find anything")

@@ -1,4 +1,5 @@
 import spacy
+import Constants
 import classy_classification
 
 class QuestionRecognition:
@@ -19,7 +20,11 @@ class QuestionRecognition:
                 "What is the box office of The Princess and the Frog?",
                 "Can you tell me the publication date of Tom Meets Zizou?",
                 "Who is the executive producer of X-Men: First Class?",
-                "Who directed Titanic?"
+                "Who directed Titanic?",
+                "What is rating of Gajni movie?",
+                "What is mpa film rating of 3idots?",
+                "What is box office of 3idiots",
+                "Who directed Game of thrones"
             ],
             "multimedia":[
                 "Show me a picture of Halle Berry.",
@@ -34,6 +39,8 @@ class QuestionRecognition:
                 "Images of Julia Roberts?",
                 "Show me an image of Rahul Gandhi",
                 "Can you show me an image of Narendra Modi"
+                "Do you have any photos of Harry Pottar",
+                "Do you have any images of Harry Pottar"
             ],
             "recommendation":[
                 "Recommend movies similar to Hamlet and Othello.",
@@ -43,7 +50,8 @@ class QuestionRecognition:
                 "Recommendations for thriller movies",
                 "Can you recommend me some horror movies?",
                 "Best movies for 2022",
-                "Suggestions for The Sky is Pink"
+                "Suggestions for The Sky is Pink",
+                "Given me some recommendations similar to 3idiots movie"
             ]
         }
         self.spacy_model = spacy.load('en_core_web_md')
@@ -56,10 +64,40 @@ class QuestionRecognition:
         )
     
     def get_question_category(self, input):
-        # TODO: Do a manual fix here by using commonly used words in question to recognize the type of question.
-        # TODO: if manual fix is inconclusive then perform machine learning way
-        # TODO: post machine learning, apply another manual fix using the commonly used entities
-        predictions = self.spacy_model(input)._.cats
-        best_prediction = max(predictions, key=predictions.get)
-        return best_prediction
+        try:
+            answer = self.is_multimedia(input)
+            if answer == "No":
+                answer = self.is_recommendation(input)
+                if answer == "No":
+                    answer = self.is_factual_emb_crowd(input)
+                    if answer == "No":
+                        predictions = self.spacy_model(input)._.cats
+                        best_prediction = max(predictions, key=predictions.get)
+                        answer = best_prediction
+            return answer
+        except:
+            return -1
+
+    
+    def is_multimedia(self, input):
+        answer = "No"
+        for word in Constants.MULTIMEDIA_TYPE:
+            if word in input.lower():
+                answer = "multimedia"
+        return answer
+    
+    def is_recommendation(self, input):
+        answer = "No"
+        for word in Constants.RECOMMEND_TYPE:
+            if word in input.lower():
+                answer = "recommendation"
+        return answer
+    
+    def is_factual_emb_crowd(self, input):
+        answer = "No"
+        for word in Constants.FACT_EMB_CROWD:
+            if word in input.lower():
+                answer = "questions"
+        return answer
+
 

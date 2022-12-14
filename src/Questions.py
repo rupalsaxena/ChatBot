@@ -2,8 +2,6 @@ import random
 from EntityRecognition import EntityRecognition
 from PredicateRecognition import RecognizePredicate
 
-# TODO: use imdb page for rating person or movie!! MAYBE
-
 DEFAULT_RESPONSES = [
     "Umm! I don't think I understand that! Can I help you in some other way?",
     "Hmmmmm! I am not sure what you mean. Can you rephrase it or ask another question?",
@@ -22,10 +20,6 @@ class Question:
         pred_ids = self.recognize_predicate(ent_dict)
         if len(ent_dict)>0 and len(pred_ids)>0:
             self.process(ent_dict, pred_ids)
-        elif len(ent_dict)>0:
-            print("do something with just entities without predicates")
-        elif len(pred_ids)>0:
-            print("do something with just predicates without entities")
         self.chooseResponse()
 
     def process(self, ent_dict, pred_ids):
@@ -55,9 +49,6 @@ class Question:
                     self.responses = random.choice(self.emb_resp)
         else:
             self.responses = self.fact_resp
-
-        print("factual:", self.fact_resp)
-        print("emb resp", self.emb_resp)
         print("responses:", self.responses)
 
     def recognize_entities(self):
@@ -76,9 +67,7 @@ class Question:
         all_preds = self.prior_obj.get_all_predicates()
         rp = RecognizePredicate(msg, prior=all_preds)
         preds, pred_ids = rp.get_predicate_ID()
-        print(preds)
         return pred_ids
-
 
     def chooseResponse(self):
         if len(self.responses) > 1:

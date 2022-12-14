@@ -47,6 +47,38 @@ class Graphs:
         responses = self.graph.query(query)
         res_list = [str(result.item) for result in responses]
         return res_list
+    
+    def queryActor(self, id):
+        query = '''
+        PREFIX wd: <http://www.wikidata.org/entity/>
+        PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+        SELECT DISTINCT ?item ?element WHERE {
+            ?element wdt:P161 wd:%s.
+            ?element rdfs:label ?item.
+            FILTER((LANG(?item)) = "en")
+            }
+            LIMIT 10
+        '''%(id)
+        responses = self.graph.query(query)
+        res_list = [str(result.item) for result in responses]
+        return res_list
+    
+    def queryMoviesfromGenres(self, id):
+        query = '''
+        PREFIX wd: <http://www.wikidata.org/entity/>
+        PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+        select distinct ?item ?element ?elementLabel where {
+            ?element wdt:P136 wd:%s . 
+            ?element rdfs:label ?elementLabel . 
+            filter(lang(?elementLabel) = "en")
+        } limit 10 
+        '''%(id)
+        responses = self.graph.query(query)
+        res_list = [str(result.elementLabel) for result in responses]
+        return res_list
+
 
 if __name__=="__main__":
     g = Graphs()
