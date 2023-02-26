@@ -7,6 +7,7 @@ from Algorithm import getResponse
 from Preprocess import Preprocess
 # url of the speakeasy server
 url = 'https://speakeasy.ifi.uzh.ch'
+#url = "https://server5.speakeasy-ai.org"
 listen_freq = 1
 
 ENTRY_MSG = "Hello, I am Griot. Type HELP in chat box to understand the types of questions I can answer! Looking forward to interact with you :D"
@@ -82,6 +83,7 @@ class DemoBot:
 
 if __name__ == '__main__':
     username = 'rupal.saxena_bot'
+    #username = "panickyLeopard0_bot"
     password = "Tori3IWM-Ep-Jw"
     prior_obj = Preprocess()
     demobot = DemoBot(username, password, prior_obj)
